@@ -1,0 +1,41 @@
+<script>
+
+    export let label
+    export let slug
+
+</script>
+
+
+
+
+<!-- <a rel="external" href="/explore/{slug}">{label}</a> -->
+<a rel="external" href="{slug}">{label}</a>
+
+
+
+<style>
+
+    a, a:hover, a:active, a:visited {
+        display:inline-block;
+        color:var(--colour-font);
+        text-decoration: none;
+        outline:none;
+        font-size: normal;
+    }
+
+    a {
+        border:1px solid transparent;
+        background: var(--colour-background);
+        border-radius: var(--size-input-border-radius);
+        padding:var(--size-input-padding);
+        font-size:1rem;
+        font-weight:normal;
+    }
+
+
+    a:hover {
+        background-color: var(--colour-menu-hover);
+        color:white;
+    }
+
+</style>

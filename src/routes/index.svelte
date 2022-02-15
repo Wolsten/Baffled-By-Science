@@ -1,2 +1,30 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<!-- src/routes/blog/index.svelte -->
+<script context="module">
+    export const load = async ({ fetch }) => {
+      const posts = await fetch('/api/posts.json')
+      const allPosts = await posts.json()
+    
+      return {
+        props: {
+          posts: allPosts
+        }
+      }
+    }
+</script>
+
+<script>
+    export let posts
+</script>
+  
+<ul>
+    {#each posts as post}
+      <li>
+        <h2>
+          <a href={post.path}>
+            {post.meta.title}
+          </a>
+        </h2>
+        Published {post.meta.date}
+      </li>
+    {/each}
+</ul>
