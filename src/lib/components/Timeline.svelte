@@ -1,4 +1,5 @@
 <script>
+    import {onMount} from 'svelte'
 
     import Utils from "$lib/Utils.js"
     import Axes from '$lib/components/Axes.svelte'
@@ -15,6 +16,11 @@
 
     export let data
     export let settings = {}
+
+    // Copy the object values - spread retains references so cannot be used
+    // This ensures that the data is not inadvertently shared across instances
+    // of this component             
+    data = JSON.parse(JSON.stringify(data))
     
     const options = {
         ...Utils.initSettings( settings, data.start, data.end, [...data.eventsSubCats, ...data.seriesSubCats]), 
@@ -24,7 +30,7 @@
         series : []
     }
     
-    console.log('data',{...data}, '\noptions', {...options})
+    console.log('data',data, '\noptions', options)
 
     let viewport
     let viewportWidth = 0
@@ -43,15 +49,23 @@
     let filteredSeries = []
     let filteredGroups = []
 
+    // Wait for window to be mounted to test for touch devices
+    onMount( ()=> {
+        const msTouchEnabled = window.navigator.msMaxTouchPoints
+        const generalTouchEnabled = "ontouchstart" in document.createElement("div")
+        $touch = msTouchEnabled || generalTouchEnabled
+    })
+
     //
     // Reactive stuff
     //
-
+    
     $: if ( $windowWidth ) handleResize()
 
     //
     // Functions
     //
+
 
     function handleOptions(event){
         const detail = event.detail
@@ -103,19 +117,13 @@
 
 
     const handleResize = Utils.debounce( event => {
-
         // console.log('Handling resize')
-
         if ( viewport && viewport.clientWidth != viewportWidth ){
-
             viewportWidth = viewport.clientWidth
-
             scaleX()
-
             // console.warn('Set new viewport width', viewportWidth)
-
             // Non-intuitive behaviour on touch devices
-            if ( Utils.isTouchSupported() == false ){
+            if ( $touch == false ){
                 if ( options.selectedEvent ){
                     setTimeout( scrollToSelected, 500 )
                 }
@@ -126,26 +134,20 @@
 
 
     function scaleX(){
-        
         viewportWidth = viewport.clientWidth
         // console.error('scaleX: viewPortWidth',viewportWidth)
-
         drawingWidth = viewportWidth - paddingLeft - paddingRight
         // console.log('drawingWidth',drawingWidth)
-        
         // scale in pixel / x-unit
         scale = drawingWidth / options.xRange.range
         // console.log('rescaling',scale)
-
         startValue = options.xRange.start - paddingLeft / scale
         endValue = options.xRange.end
         // console.warn('startValue',startValue,'endValue',endValue)
-
         filteredEvents = Utils.processEvents(data.events, 
                                              scale, startValue, endValue, drawingWidth, 
                                              data.eventsSubCats, options.subCats, 
                                              options.search)
-
         // console.log('series',series,'groups',groups,'scale',scale)
         if ( data.series.length > 0 ) filteredSeries = Utils.processSeries(data.series, scale, startValue, endValue)
         if ( data.groups.length > 0 ) filteredGroups = Utils.processSeries(data.groups, scale, startValue, endValue)
@@ -188,7 +190,7 @@
 
         {#if options.readonly}
 
-            <Caption {options} title={data.name} slug={data.analyse}/>
+            <Caption {options} title={data.name} slug="/explore/{data.slug}"/>
         
         {:else}
 

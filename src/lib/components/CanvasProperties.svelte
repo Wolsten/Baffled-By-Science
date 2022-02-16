@@ -64,7 +64,7 @@
                         <div class="col" class:active={options.selectedPoint.i==point.i}
                                 on:click|stopPropagation={()=>selectPoint(point.i)}>
 
-                            <div>{Graph.formatNumber(point.value)}</div>
+                            <div>{Utils.formatNumber(point.value)}</div>
                             <div class="x">{point.xLabel}</div>
                         </div>
 

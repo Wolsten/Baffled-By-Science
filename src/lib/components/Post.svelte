@@ -2,21 +2,23 @@
 
     export let post
 
-    let image = `/images/${post.image}`.replace('.','-thumb.')
+    let image = `/images/${post.meta.image}`.replace('.','-thumb.')
+    let date = new Date(post.meta.date)
 
-    // console.log('post',post)
+    console.log('post',post)
     
 </script>
 
 
 <article>
-    <a href="/blog/{post.slug}">
+    <a href="{post.path}">
         <img src="{image}" alt="" />
         <header>
-            <h2>{post.name}</h2>
+            <h2>{post.meta.title}</h2>
+            <p>Published {date.toLocaleDateString()}</p>
         </header>
         <div class="body">
-            <p>{post.summary}</p>
+            <p>{post.meta.summary}</p>
         </div>
     </a>
 </article>
@@ -69,6 +71,17 @@
         padding:0 1rem;
     }
 
+    header h2 {
+        margin: 0.5rem 0 0 0;
+    }
+
+    header p {
+        margin:0;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        color: var(--colour-post-date);
+    }
+
     a {
         position:relative;
         display:flex;
@@ -88,16 +101,16 @@
         transition: all ease-in-out 300ms;
     }
 
-    a:hover img{
+    h2, p {
+        color:var(--colour-post);
+    }
+
+    article:hover img {
         transform: scale(110%,110%);
     }
 
-    h2, p {
-        color:var(--material-50-blue-grey);
-    }
-
-    article:hover h2,
-    article:hover p {
-        color: var(--colour-post-title-hover);
+    article:hover header h2,
+    article:hover header p {
+        color:var(--colour-post-date-hover);
     }
 </style>

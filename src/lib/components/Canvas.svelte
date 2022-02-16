@@ -23,7 +23,7 @@
 
 
     // Set viewport height to be proportional to width upto a max size
-    let height = Math.min(viewportWidth/2,100)
+    let height = Math.min(viewportWidth/2, Utils.CANVAS_MIN_HEIGHT)
 
     // The active series or group depends on options.totalise and options.subCats
     let items = []    

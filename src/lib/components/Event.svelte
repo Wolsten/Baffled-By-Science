@@ -21,7 +21,7 @@
 			if ( category == event.subCategory ){
 				return event.colour
 			}
-			return Graph.COLOUR_INACTIVE
+			return Utils.COLOUR_INACTIVE
 		}
 		return event.colour
 	}

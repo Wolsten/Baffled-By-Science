@@ -106,16 +106,6 @@ const formatYear = function(year){
 }
 
 
-const isTouchSupported = function() {
-    const msTouchEnabled = window.navigator.msMaxTouchPoints
-    const generalTouchEnabled = "ontouchstart" in document.createElement("div")
- 
-    if (msTouchEnabled || generalTouchEnabled) {
-        return true
-    }
-    return false
-}
-
 
 const eventDates = function(event){
 	// debugger
@@ -525,7 +515,22 @@ const labelAxis = function( xAxis, paddingLeft, drawingWidth, range){
 }
 
 
+const fetchData = async function ( fetch, dataName ){
+	const post = await fetch(`/data/${dataName}.json`)
+	const data = await post.json()
+	return data
+}
+
+const fetchDataset = async function ( fetch, datasetName ){
+	const post = await fetch(`/data/${datasetName}.json`)
+	const dataset = await post.json()
+	return processDataset(dataset)
+}
+
+
 const Utils = {
+	fetchData,
+	fetchDataset,
     processDataset,
     initSettings,
     processEvents,
@@ -533,13 +538,13 @@ const Utils = {
 	eventDates,
     labelAxis,
 	debounce,
-	isTouchSupported,
 	toPrecision,
 	formatNumber,
 	formatYear,
 	colour,
 	COLOUR_INACTIVE: 'rgb(189, 189, 189)', // Material grey 400
 	MIN_BOX_WIDTH: 80,
+	CANVAS_MIN_HEIGHT: 200,
 	CANVAS_PADDING_LEFT: 20,
 	CANVAS_PADDING_RIGHT: 20,
 	NAV_BREAK: 600

@@ -60,7 +60,11 @@
     --colour-menu: var(--material-700-red);
     --colour-menu-hover: var(--material-700-red);
 
+    --colour-post: white;
     --colour-post-title-hover: white;
+
+    --colour-post-date: var(--material-50-blue-grey);
+    --colour-post-date-hover: var(--material-500-yellow);
 
     --colour-box-shadow: var(--material-200-blue-grey);
     
@@ -71,6 +75,7 @@
     --colour-input-border: var(--material-200-blue-grey);
     --colour-toggle: var(--material-500-blue-grey);
     --colour-toggle-hover: var(--material-300-blue-grey);
+    
     /* --colour-toggle-hover-font: var(--material-500-amber); */
     --colour-toggle-hover-font: white;
     --colour-range-slider-fill: var(--material-100-grey);
