@@ -4,24 +4,15 @@ const MIN_EVENT_WIDTH = 3
 // https://materialui.co/colors
 // 500 unless otherwise stated
 const COLOUR_SET = [
-	// Red 500
-	'rgb(244, 67, 54)',
-	// Blue 700
-	'rgb(25, 118, 210)',
-	// Green 200
-	'rgb(165, 214, 167)',
-	// Lime 600
-	'rgb(192, 202, 51)',
-	// Amber 500
-	'rgb(255, 193, 7)',
-	// Brown 200
-	'rgb(188, 170, 164)',
-	// Blue grey 500
-	'rgb(96, 125, 139)',
-	// Cyan 700
-	'rgb(0, 151, 167)',
-	// Indigo 300
-	'rgb(121, 134, 203)'
+	'var(--material-600-red)',
+	'var(--material-400-indigo)',
+	'var(--material-500-teal)',
+	'var(--material-600-light-green)',
+	'var(--material-500-amber)',
+	'var(--material-300-brown)',
+	'var(--material-500-blue-grey)',
+	'var(--material-700-cyan)',
+	'var(--material-700-orange)'
 ]
 
 

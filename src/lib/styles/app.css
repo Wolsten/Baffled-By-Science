@@ -44,6 +44,14 @@
     --material-700-red: rgb(211, 47, 47);
     --material-800-red: rgb(198, 40, 40);
 
+    --material-400-indigo: rgb(92, 107, 192);
+    --material-500-teal: rgb(0, 150, 136);
+    --material-600-light-green: rgb(124, 179, 66);
+    --material-500-amber: rgb(255, 193, 7);
+    --material-300-brown: rgb(161, 136, 127);
+    --material-700-cyan: rgb(0, 151, 167);
+    --material-700-orange: rgb(245, 124, 0);
+
     /* Custom colour variables */
 
     --colour-background: white;
@@ -56,7 +64,7 @@
     --colour-link-hover: var(--material-400-red);
 
     --colour-menu: var(--material-800-red);
-    --colour-menu-hover: var(--material-500-red);
+    --colour-menu-hover: var(--material-600-red);
 
     --colour-post: white;
     --colour-post-title-hover: white;
