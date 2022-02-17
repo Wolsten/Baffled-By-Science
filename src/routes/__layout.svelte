@@ -44,7 +44,7 @@
 
         <span class="logo">
             <a href="/" class:clickable="{path != '/'}">
-                <img src="/blog-logo-small.png" alt="logo"> <span>Baffled By Science</span>
+                <img src="/blog-logo-50x50.png" alt="logo"> <span>Baffled By Science</span>
             </a>
         </span>
 

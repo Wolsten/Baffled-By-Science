@@ -32,7 +32,7 @@
 		let text = 'middle'
         let right = e.left + e.width
         // console.log('labelValues',e)
-		if ( right > 0 && right < w * 0.4 ){
+		if ( right > 0 && right < w * 0.7 ){
 			text = 'right'
 			x = e.width + 5
 		} else if ( e.left > w * 0.3 && e.left < w){

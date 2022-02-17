@@ -73,8 +73,6 @@
    on:click|stopPropagation={ handleClick }
    >
 
-   <!-- on:dblclick|stopPropagation={ handleDblClick } -->
-
 	<rect x={0} y={-height/2} width={event.width} height={height*0.9} />
 
 	<text x={label.x} class={label.text} y={height/7}>

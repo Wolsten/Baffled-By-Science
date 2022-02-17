@@ -71,12 +71,15 @@ We can see that the period *Before homo* is split into 3 periods:
 
 *Genus homo* corresponds to the appearance of the earliest representative *Homo Habilis*. We can focus the time-span on this event and the detailed events within it:
 
-[timeline 
-    slug="human-evolution" 
-    readonly="true"
-    start="3.2mya"  
-    end="0.2mya"
-]
+<Timeline
+    data={dataHumanEvo}
+    settings={{
+        readonly: true,
+        xRange: {
+            start: -3200000,
+            end: -200000
+        }
+    }}/>
 
 This shows that *homo sapiens* appeared about 300,000 years ago, or in our clock analogy, about one fifth of a second before midnight! 
 
