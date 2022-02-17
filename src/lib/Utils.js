@@ -4,12 +4,10 @@ const MIN_EVENT_WIDTH = 3
 // https://materialui.co/colors
 // 500 unless otherwise stated
 const COLOUR_SET = [
-	// Red 200
-	'rgb(239, 154, 154)', 
-	// Deep purple 200
-	'rgb(179, 157, 219)',
-	// Blue 200
-	'rgb(144, 202, 249)',
+	// Red 500
+	'rgb(244, 67, 54)',
+	// Blue 700
+	'rgb(25, 118, 210)',
 	// Green 200
 	'rgb(165, 214, 167)',
 	// Lime 600
@@ -161,7 +159,7 @@ const initSettings = function( userSettings, start, end, subCats ){
             range: end - start
         }
     }
-    settings.subCats = userSettings.subCats || [...subCats]
+    settings.subCats = userSettings.subCats || subCats
     return settings
 }
 
@@ -261,7 +259,7 @@ const initSeriesColours = function(series, groups){
 				subCatIndex = indices.length - 1
 			}
 		}
-		entry.colourIndex = subCatIndex % COLOUR_SET.length // COLOURS
+		entry.colourIndex = subCatIndex % COLOUR_SET.length
 		entry.symbolIndex = index % SYMBOLS
 	})
 	groups.forEach( (entry,index) => {
@@ -273,9 +271,11 @@ const initSeriesColours = function(series, groups){
 				subCatIndex = indices.length - 1
 			}
 		}
-		entry.colourIndex = subCatIndex % COLOUR_SET.length // COLOURS
+		entry.colourIndex = subCatIndex % COLOUR_SET.length
 		entry.symbolIndex = index % SYMBOLS
 	})
+
+	console.log('series',series)
 
     return {series, groups}
 }

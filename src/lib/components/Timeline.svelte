@@ -87,7 +87,7 @@
                 scaleX()
                 break
             case 'category'   : 
-                options.filter = detail.data
+                options.search = detail.data
                 options.selectedEvent = false
                 options.selectedPoint = false
                 break
@@ -100,7 +100,7 @@
                 break
         }
         if ( detail.name != 'category' ){
-            options.filter = ''
+            options.search = ''
         }
     }
 

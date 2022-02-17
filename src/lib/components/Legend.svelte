@@ -18,27 +18,27 @@
 
     function handleClickEventCategory( cat ){
         // console.log('filteredSeries',index, options.series)
-        if ( cat != options.filter ){
-            options.filter = cat
+        if ( cat != options.search ){
+            options.search = cat
         } else {
-            options.filter = ''
+            options.search = ''
         }
         // console.log('selected',options.selectedEvent)
 
-        dispatch('optionsChanged',{name:'category', data:options.filter})
+        dispatch('optionsChanged',{name:'category', data:options.search})
     }
 
 
     function handleClickSeries( filter ){
         console.log('handleClickSeries with filter',filter)
-        if ( filter != options.filter ){
-            options.filter = filter
+        if ( filter != options.search ){
+            options.search = filter
         } else {
-            options.filter = ''
+            options.search = ''
         }
         // console.log('selected',options.selectedEvent)
 
-        dispatch('optionsChanged',{name:'category', data:options.filter})
+        dispatch('optionsChanged',{name:'category', data:options.search})
     }
 
 
@@ -86,7 +86,7 @@
 
                         <span class="series" 
                             style:color={Utils.colour(index, index, options.categorise)}
-                            class:active={options.filter==cat} 
+                            class:active={options.search==cat} 
                             title="Click to highlight this event category"
                             on:click|stopPropagation={()=>handleClickEventCategory(cat)} >
 
@@ -113,7 +113,7 @@
                 
                     <span class="series" 
                         style:color={Utils.colour(index, series.colourIndex, options.categorise || options.totalise)}
-                        class:active={active(options.filter, filter, options.selectedPoint,index)} 
+                        class:active={active(options.search, filter, options.selectedPoint,index)} 
                         on:click|stopPropagation={()=>handleClickSeries(filter)}
                         title="Click to highlight this series">
 

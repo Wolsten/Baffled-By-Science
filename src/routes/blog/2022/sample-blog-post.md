@@ -46,7 +46,8 @@ categories:
     settings={{
         subCats: ['eon','era','period'],
         readonly: true
-    }}/>
+    }}
+/>
 
 ## Third Timeline
 
@@ -55,7 +56,8 @@ categories:
     settings={{
         subCats: ['eon','evolution'],
         readonly:true
-    }}/>
+    }}
+/>
 
 ## Fourth Timeline
 
@@ -63,7 +65,8 @@ categories:
     data={dataHumanEvo}
     settings={{
         readonly: true
-    }} />
+    }} 
+/>
 
 ## Fifth Timeline
 
@@ -75,4 +78,5 @@ categories:
             start: -3200000,
             end: -200000
         }
-    }}/>
+    }}
+/>

@@ -278,7 +278,7 @@
         <!-- Date series -->
         {#each options.series as entry, index}
 
-            {@const colour = getColour(options.selectedPoint,options.filter,index,entry.colourIndex)}
+            {@const colour = getColour(options.selectedPoint,options.search,index,entry.colourIndex)}
             {@const width = colour==Utils.COLOUR_INACTIVE ? 1 : 2}
 
             <!-- Line -->

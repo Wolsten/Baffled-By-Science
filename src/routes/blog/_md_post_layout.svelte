@@ -2,6 +2,7 @@
      specified in svelte.config.js -->
 <script>
     import { fade } from 'svelte/transition'
+    import { onMount } from 'svelte'
     
     import HeaderImage from '$lib/components/HeaderImage.svelte'
 
@@ -17,6 +18,21 @@
     let banner = `/images/${image}`
     let created = new Date(date)
     let updated = updatedDate ? new Date(updatedDate) : ''
+
+    // Add id's to all headings
+    onMount(()=>{
+        const headings = document.querySelectorAll('h1,h2,h3,h4,h5,h6')
+        // console.log('headings',headings)
+        headings.forEach( heading => {
+            if ( heading.id === '' ){
+                const id = heading.innerHTML
+                    .replaceAll(' ','-')
+                    .replaceAll("'",'')
+                    .replaceAll('"','')
+                heading.id = id.toLocaleLowerCase()
+            }
+        })
+    })
 </script>
 
 <HeaderImage {title} description={summary} image={banner} {imageCredit}/>
@@ -25,14 +41,14 @@
 
     <header>
         <h1>{title}</h1>
-        <p class="dates">Posted {created.toLocaleDateString()}
+        <p class="dates">Published {created.toLocaleDateString()}
 
             {#if categories.length > 0}
                 in {categories.join(', ')}
             {/if}
 
             {#if updatedDate && updatedDate != date }
-                , updated {updated.toLocaleDateString()}
+                <br>Updated {updated.toLocaleDateString()}
             {/if}
         </p>
         <blockquote>{summary}</blockquote>
@@ -67,7 +83,7 @@
     p.dates {
         margin-top:0;
         font-style: italic;
-        font-weight: bold;
+        /* font-weight: bold; */
     }
 
     blockquote{

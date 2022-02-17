@@ -46,7 +46,7 @@
 <h3>Options</h3>
 
 <dl>
-    <dt>filter</dt><dd>{options.filter || 'none'}</dd>
+    <dt>filter</dt><dd>{options.search || 'none'}</dd>
     <dt>readonly</dt><dd>{options.readonly}</dd>
     <dt>subCats</dt><dd>{options.subCats.join(', ')}</dd>
     <dt>sort</dt><dd>{options.sort}</dd>
