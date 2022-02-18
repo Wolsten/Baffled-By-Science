@@ -16,9 +16,6 @@ const COLOUR_SET = [
 ]
 
 
-
-
-
 const colour = function(index,colourIndex,group){
 	if ( group ){
 		index = colourIndex
@@ -266,7 +263,7 @@ const initSeriesColours = function(series, groups){
 		entry.symbolIndex = index % SYMBOLS
 	})
 
-	console.log('series',series)
+	// console.log('series',series)
 
     return {series, groups}
 }
@@ -533,7 +530,7 @@ const Utils = {
 	formatNumber,
 	formatYear,
 	colour,
-	COLOUR_INACTIVE: 'rgb(189, 189, 189)', // Material grey 400
+	COLOUR_INACTIVE: 'var(--material-grey-400)',
 	MIN_BOX_WIDTH: 80,
 	CANVAS_MIN_HEIGHT: 200,
 	CANVAS_PADDING_LEFT: 20,

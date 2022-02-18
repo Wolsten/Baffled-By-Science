@@ -94,7 +94,11 @@
         color: var(--colour-menu);
         background-color: var(--colour-background);
 
-        padding:0.6rem 0.6rem;
+        padding:0.6rem;
+    }
+
+    nav.mobile a {
+        padding:1.2rem;
     }
 
     a:hover {
@@ -171,7 +175,7 @@
 
         background-color: var(--colour-menu);
         z-index: 100;
-        padding:1rem 0 1rem 0;
+        /* padding:1rem 0 1rem 0; */
         padding:0rem;
 
         box-shadow: gray 2px 1px 5px;

@@ -73,7 +73,7 @@ import { createEventDispatcher } from 'svelte'
         dispatch('optionsChanged', {name:'xRange', data:options.xRange})
 
         // console.log('major axis',majorAxis)
-        console.log('new date range', options.xRange)
+        // console.log('new date range', options.xRange)
     }
 
 

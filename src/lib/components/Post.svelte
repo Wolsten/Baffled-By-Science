@@ -1,18 +1,20 @@
 <script>
 
+    import {mobile} from '$lib/stores.js'
+
     export let post
 
-    let image = `/images/${post.meta.image}`.replace('.','-thumb.')
     let date = new Date(post.meta.date)
 
-    console.log('post',post)
+    // console.log('post',post)
     
 </script>
 
 
-<article>
+<article class:mobile={$mobile}>
+
     <a href="{post.path}">
-        <img src="{image}" alt="" />
+        <img src={post.meta.image} alt="" />
         <header>
             <h2>{post.meta.title}</h2>
             <p>Published {date.toLocaleDateString()}</p>
@@ -28,6 +30,7 @@
 
     article {
         padding:0;
+        margin:0.3rem;
         /* margin-top:1rem; */
         height: var(--size-post-height);
         /* outline: 2px outset transparent;
@@ -45,13 +48,13 @@
             rgba(0,0,0,0) 20%, 
             rgba(0,0,0,0.5) 60%
         );
-        
+        color: var(--colour-post);
     }
 
-    @media (max-width:600px){
-        article{
-            max-width: 100%;
-        }
+    article.mobile {
+        max-width: 100%;
+        width: 100%;
+        margin: 0.3rem 0;
     }
 
     article:hover {
@@ -63,8 +66,8 @@
             rgba(0,0,0,0) 20%, 
             rgba(0,0,0,0.6) 60%
         );
-
         /* outline-color: var(--colour-link-hover); */
+        color:var(--colour-post-hover);
     }
 
     header, .body {
@@ -79,7 +82,7 @@
         margin:0;
         font-size: 0.9rem;
         line-height: 1.2rem;
-        color: var(--colour-post-date);
+        /* color: var(--colour-post); */
     }
 
     a {
@@ -105,12 +108,12 @@
         color:var(--colour-post);
     }
 
-    article:hover img {
-        transform: scale(110%,110%);
+    article:hover h2,
+    article:hover p {
+        color:var(--colour-post-hover);
     }
 
-    article:hover header h2,
-    article:hover header p {
-        color:var(--colour-post-date-hover);
+    article:hover img {
+        transform: scale(110%,110%);
     }
 </style>

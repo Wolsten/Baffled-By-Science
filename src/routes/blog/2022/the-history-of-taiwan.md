@@ -1,8 +1,8 @@
 ---
 title: The history of Taiwan
 date: 2022-02-16
-summary: Gain a better perspective on life by looking at the evolution of life against  the geologic time scale going back over 4 billion years.
-image: tom-ritson-ehf8SFStOvM-unsplash.jpg
+summary: With geopolitical tensions arising around the world with the focus on the Ukraine, we should not forget that Taiwan is in a precarious position.
+image: /images/tom-ritson-ehf8SFStOvM-unsplash-thumb.jpg
 imageCredit: Photo by <a href="https://unsplash.com/@ritsxn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tom Ritson</a> on <a href="https://unsplash.com/s/photos/taiwan-culture?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 categories: 
   - history

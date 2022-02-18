@@ -12,9 +12,13 @@
 
     <p>This blog is for those of us who get frustrated by what we read and hear in the media about science and technology and the way in which it is translated into policy by government. My background is in physics and Information Technology and now I am semi-retired I have more time to think about a broader range of subjects. I don't claim to be an expert on anything but I have the luxury of time to explore things that many people don't and so hope to provide new insights which may be useful.</p>
 
-    <p>I aim to cover a wide variety of topics with an emphasis on understanding what data tells us about the world today. By looking at long term historical trends I will show that there is often a much more positive outlook for the world than you might believe from the relentless diet of doom and gloom clickbait journalism produced by the mainstream media. Inevitably some of the conclusions will make uncomfortable reading for some since the gap between the media narrative and reality can be surprisingly large.</p>
+    <p>I aim to cover a wide variety of topics with an emphasis on understanding what data tells us about the world today. By looking at long term historical trends I will show that there is often a much more positive outlook for the world than you might believe from the relentless diet of doom and gloom clickbait journalism produced by the mainstream media. Inevitably some of the conclusions may make uncomfortable reading since the gap between the media narrative and reality can be surprisingly large.</p>
 
-    <p>As an example, up until about 15 years ago I followed the media line on climate change without question and like many found the outlook for humanity to be depressing. Then a number of things happened which forced me to reassess my views. This started with a discussion with a friend over a pint in the pub. I had just read another doom laden article about the imminent demise of snow in Europe and how "children were not going to know what snow looks like in a few years (sic)". We were thinking about going skiing in the New Year and I ventured that we needed to get in as many trips as we could because soon we wouldn't be able to. My friend disagreed, claiming there was a lot of data that demonstrated this forecast was nonsense so we agreed to a small wager.</p>
+    <p>As an example, up until about 15 years ago I followed the media line on climate change without question and like many found the outlook for humanity to be depressing. Then a number of things happened which forced me to reassess my views. This started with a discussion with a friend over a pint in the pub. I had just read another doom laden article in the Independent (since deleted) which quoted Dr David Viner (Senior scientist, University of East Anglia Climatic Research Unit):
+
+    <blockquote>... within a few years winter snowfall will become “a very rare and exciting event ... children just aren’t going to know what snow is"</blockquote>
+        
+    <p>We were thinking about going skiing in the New Year and I ventured that we needed to get in as many trips as we could because soon we wouldn't be able to. My friend disagreed, claiming there was a lot of data that demonstrated this forecast was nonsense so we agreed to a small wager.</p>
 
     <p>I didn't think it would take long to put a small paper together summarising the main data supporting the various aspects of the coming apocalypse. You can guess the rest. By following the various headlines and digging into the references behind the headlines it became clear that my friend was correct. It's difficult to exaggerate the overwhelming feeling of cognitive dissonance that ensued, particularly as someone who has developed complex computer models of geophysical processes. Just writing these words down in 2022 makes me wince in embarrassment. However, it showed me that even those who ought to know better are not immune to the group-think that pervades the mainstream media and our cultural life.</p>
 
@@ -51,5 +55,10 @@
     <br>
         7th Jan 2022, Manchester, UK
     </p>
+
+
+    <h2>Copyright</h2>
+
+    <p>I assert copyright on all material on this web site with the exception of material explicitly credited, such as many of the images. If I have missed any credits please let me know and I will update the website accordingly.</p>
 
 </div>

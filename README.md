@@ -43,4 +43,3 @@ You can preview the production build with `npm run preview`.
 
 https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog
 
-

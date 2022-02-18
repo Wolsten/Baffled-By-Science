@@ -10,7 +10,6 @@
 
     <h1>Contact me</h1>
     
-    <p>If you would like to be kept up to date with posts on this website or have suggestions for corrections or improvements please email me at: <a href="mailto:info@baffledbyscience.com">info@baffledbyscience.com</a>.</p>
+    <p>If you would like to be kept up to date with posts on this website or have suggestions for corrections or improvements please email me at: <a href="mailto:steve@baffledbyscience.com">steve@baffledbyscience.com</a>.</p>
 
 </div>
-

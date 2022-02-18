@@ -6,7 +6,7 @@
     export let options
     export let slug
 
-    console.log('slug',slug)
+    // console.log('slug',slug)
 
     let mainTitle = ''
     let subTitle = ''

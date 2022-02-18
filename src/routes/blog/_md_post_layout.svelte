@@ -15,7 +15,7 @@
     export let imageCredit
     export let categories = []
 
-    let banner = `/images/${image}`
+    // let banner = `/images/${image}`
     let created = new Date(date)
     let updated = updatedDate ? new Date(updatedDate) : ''
 
@@ -35,7 +35,7 @@
     })
 </script>
 
-<HeaderImage {title} description={summary} image={banner} {imageCredit}/>
+<HeaderImage {title} description={summary} {image} {imageCredit}/>
 
 <div class="page-container" transition:fade>  
 

@@ -9,14 +9,11 @@
 
     let path = ''
     let nav = {}
-
-    $: $desktop = $windowWidth >= Utils.NAV_BREAK
-    $: $mobile = !$desktop
+    let container
 
     onMount(()=>{
         path = $page.url.pathname
-        $windowWidth = window.innerWidth
-        // console.log('onMount path',path)
+        handleResize()
     })
 
     afterUpdate(()=>{
@@ -25,8 +22,12 @@
     })
 
     function handleResize(){
-        // console.log(window.innerWidth)
-        $windowWidth = window.innerWidth
+        $windowWidth = container.clientWidth
+        $mobile = $windowWidth < Utils.NAV_BREAK
+        $desktop = !$mobile
+        // console.log('$windowWidth',$windowWidth)
+        // console.log('$desktop',$desktop)
+        // console.log('$mobile',$mobile)
     }
 
     function resetMenu(){
@@ -38,7 +39,7 @@
 
 <svelte:window on:resize={handleResize}/>
 
-<div class="container" on:click={resetMenu}>
+<div class="container" on:click={resetMenu} bind:this={container}>
 
     <header>
 
@@ -67,6 +68,7 @@
         flex-direction: column;
         align-items: center;
         height:100vh;
+        width:100%;
     }
 
     header {
@@ -74,11 +76,13 @@
         justify-content: space-between;
         align-items: center;
         width:100%;
+        min-height:70px;
         padding:1rem;
     }
 
     span.logo {
-        flex-shrink:3;
+        display:inline-block;
+        flex-shrink:1;
         flex-grow:1;
         padding:0;
         margin:0;
@@ -87,16 +91,13 @@
     }
 
     span.logo a {
+        display:flex;
         font-size:1.6rem;
         font-weight: bold;
         text-transform: uppercase;
         color: var(--colour-font-titles);
         text-decoration: none;
         cursor:default;
-    }
-
-    span.logo a {
-        display:flex;
         align-items: center;
     }
 

@@ -30,7 +30,7 @@
 
 {#each datasets as dataset}
 
-	<p><a href="/explore/{dataset.slug}">{dataset.name}</a></p>
+	<p><a href="/explore/{dataset.path}">{dataset.path}</a></p>
 
 {/each}
 

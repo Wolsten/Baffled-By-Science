@@ -8,7 +8,7 @@
 			title:'About this blog',
 			date: '2022-02-16',
 			summary : 'The blog for those of us baffled by what we read or hear in the media about science, technology and policy making.',
-			image : 'jr-korpa-fi5FPDZ6tns-unsplash.jpg',
+			image : '/images/jr-korpa-fi5FPDZ6tns-unsplash-thumb.jpg',
 			imageCredit: 'Photo by <a href="https://unsplash.com/@jrkorpa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jr Korpa</a> on <a href="https://unsplash.com/collections/_Giamd8z4so/baffled-by-science/4aae626d376a8f46f5d4b78d1223a71c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
 		}
 	}
@@ -55,17 +55,17 @@
         display:flex;
 		flex-wrap: wrap;
 		justify-content: center;
-        column-gap:3rem;
-        row-gap:3rem;
-		padding-top:3rem;
+        /* column-gap:3rem; */
+        /* row-gap:3rem; */
+		/* padding-top:3rem; */
     }
 
 	@media ( max-width:600px ){
 		div.grid {
 			justify-content: space-between;
 			padding-top:0;
-			column-gap:0;
-        	row-gap:1rem;
+			/* column-gap:0;
+        	row-gap:1rem; */
 		}
 	}
 

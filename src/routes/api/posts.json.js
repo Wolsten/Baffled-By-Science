@@ -6,8 +6,8 @@ export const get = async () => {
 	const allPostFiles = import.meta.glob('../blog/**/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 
-    console.log('allPostFiles',allPostFiles)
-    console.log('iterablePostFiles',iterablePostFiles)
+    // console.log('allPostFiles',allPostFiles)
+    // console.log('iterablePostFiles',iterablePostFiles)
 
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {

@@ -1,6 +1,5 @@
 <script>
 
-    // @todo Add to credits
     // https://bennettfeely.com/clippy/
 
     export let i
