@@ -54,6 +54,7 @@
 
             options.selectedEvent = false
             options.search = ''
+            options.filter = ''
 
             // options.zoom = 1
             options.xRange = {
@@ -152,6 +153,7 @@
         <Button label="Reset" 
                 disabled={options.xRange.start==xAxis.majorFirst && 
                             options.xRange.end==xAxis.majorLast && 
+                            options.filter == '' &&
                             options.search == ''} 
                 on:clicked={()=>handleZoomIn(false)}/>
     </div>
