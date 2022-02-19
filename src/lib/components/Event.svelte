@@ -15,10 +15,10 @@
 	let lastClickedMs = 0
 
 
-	function rectColour(category){
+	function rectColour(filter){
 		// console.log(sel,event)
-		if ( category != undefined && category != '' ){
-			if ( category == event.subCategory ){
+		if ( filter != undefined && filter != '' ){
+			if ( filter == event.subCategory ){
 				return event.colour
 			}
 			return Utils.COLOUR_INACTIVE
@@ -68,7 +68,7 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <g transform="translate({event.left}, {margin.top + (options.sort=='x' ? event.xOrder : event.cOrder) * height})" 
-   style="--event-rect-colour: { rectColour(options.search) };"
+   style="--event-rect-colour: { rectColour(options.filter) };"
    class:selected={options.selectedEvent && options.selectedEvent.index==event.index}
    on:click|stopPropagation={ handleClick }
    >

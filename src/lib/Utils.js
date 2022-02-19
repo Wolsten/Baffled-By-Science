@@ -135,6 +135,7 @@ const initSettings = function( userSettings, start, end, subCats ){
     settings.categorise = userSettings.categorise || false
     settings.logscale= userSettings.logscale || false
     settings.search = userSettings.search || ''
+	settings.filter = userSettings.filter || ''
     settings.title = userSettings.title || ''
     settings.sort = userSettings.sort || 'x'
     if ( userSettings.xRange && userSettings.xRange.start && userSettings.xRange.end ){

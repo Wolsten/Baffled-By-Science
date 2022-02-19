@@ -16,7 +16,13 @@
         // Return props to script
         return {
             props: {
-                credits,
+                credits: credits.sort( (a,b) => {
+                    const A = a.name.toLowerCase()
+                    const B = b.name.toLowerCase()
+                    if ( A > B ) return 1
+                    if ( A < B ) return -1
+                    return 0
+                }),
                 categories
             }
         }
@@ -49,11 +55,18 @@
 
 </script>
 
-<HeaderImage title="Baffled by Science Credits" description="Sources of data, images and inspiration"/>
+<HeaderImage 
+    title="Baffled by Science Credits" 
+    description="Sources of tool, data, knowledge, images and inspiration"
+    image="/images/alexas_fotos-pnGjbJEmU3o-unsplash-thumb.jpg"
+    imageCredit='Photo by <a href="https://unsplash.com/@alexas_fotos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexas_Fotos</a> on <a href="https://unsplash.com/s/photos/thanks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+/>
 
 <div class="page-container">
 
     <h1>Credits</h1>
+
+    <p>Many thanks to all those who freely provide fantastic tools, data, knowledge and media, helping bloggers like myself to build content-rich websites. Use the drop-down list below to highlight specific types of resource.</p>
 
     <Select name="category" label="Filter by category" first="Any" options={categories} bind:value={category} on:changed={handleCategoryFilter}/>
 

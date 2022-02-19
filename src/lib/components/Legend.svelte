@@ -16,29 +16,29 @@
     // console.log('options subCats',options.subCats)
 
 
-    function handleClickEventCategory( cat ){
+    function handleClickEventCategory( filter ){
         // console.log('filteredSeries',index, options.series)
-        if ( cat != options.search ){
-            options.search = cat
+        if ( filter != options.filter ){
+            options.filter = filter
         } else {
-            options.search = ''
+            options.filter = ''
         }
         // console.log('selected',options.selectedEvent)
 
-        dispatch('optionsChanged',{name:'category', data:options.search})
+        dispatch('optionsChanged',{name:'filter', data:options.filter})
     }
 
 
     function handleClickSeries( filter ){
         console.log('handleClickSeries with filter',filter)
-        if ( filter != options.search ){
+        if ( filter != options.filter ){
             options.search = filter
         } else {
             options.search = ''
         }
         // console.log('selected',options.selectedEvent)
 
-        dispatch('optionsChanged',{name:'category', data:options.search})
+        dispatch('optionsChanged',{name:'filter', data:options.filter})
     }
 
 
