@@ -26,7 +26,7 @@
 
     <p>You can also click on points in a series to display the data for that series and source reference. Clicking on a point in the data series highlights the corresponding point in the the chart.</p>
         
-    <p>If you want to explore a timeline in more detail click on the <strong>Analyse</strong> button in the top right hand corner of a timeline.</p>
+    <p>If you want to explore a timeline in more detail click on the <strong>Explore</strong> button in the top right hand corner of a timeline.</p>
 
     <p>When exploring a dataset more controls are provided allowing you to sort, search and group the data. You can also adjust the time period being displayed by double-clicking an event, selecting an event then clicking the <strong>Focus</strong> button or by adjusting the date sliders at the bottom of the chart. Click the <strong>Reset</strong> button to display the default date range.</p>
 
