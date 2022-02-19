@@ -39,6 +39,7 @@
     --material-50-red: rgb(255, 235, 238);
     --material-100-red: rgb(255, 205, 210);
     --material-200-red: rgb(239, 154, 154); /* Logo colour */
+    --material-300-red: rgb(229, 115, 115);
     --material-400-red: rgb(239, 83, 80);
     --material-500-red: rgb(244, 67, 54);
     --material-600-red: rgb(229, 57, 53);
@@ -54,23 +55,27 @@
     --material-700-orange: rgb(245, 124, 0);
     --material-500-yellow : rgb(255, 235, 59);
     --material-grey-400: rgb(189, 189, 189);
+    --material-100-light-blue: rgb(179, 229, 252);
+    --material-400-light-blue: rgb(41, 182, 246);
 
     /* Custom colour variables */
+
+    --colour-yellow: rgb(255,243,76);
 
     --colour-background: white;
     
     --colour-font: var(--material-600-blue-grey);
     --colour-font-faint: var(--material-400-blue-grey);
-    --colour-font-titles: var(--material-800-red);
+    --colour-font-titles: var(--material-700-red);
 
     --colour-link: var(--material-800-red);
     --colour-link-hover: var(--material-400-red);
 
-    --colour-menu: var(--material-800-red);
-    --colour-menu-hover: var(--material-600-red);
+    --colour-menu: var(--material-600-red);
+    --colour-menu-hover: var(--material-300-red);
 
     --colour-post: white;
-    --colour-post-hover: var(--material-50-red);
+    --colour-post-hover: var(--material-500-yellow);
 
     --colour-box-shadow: var(--material-200-blue-grey);
     

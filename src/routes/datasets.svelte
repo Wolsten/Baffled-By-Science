@@ -1,7 +1,8 @@
 
-<!-- @todo UNUSED: Cannot get the associated api endpoint working to find datasets 
-	in the static data folder -->
 <script context="module">
+
+  // import collections from '../../../static/data/collections.json'
+  // console.log('collections',collections)
     
 	/**
      * Load the dataset collections catalogue
@@ -30,7 +31,7 @@
 
 {#each datasets as dataset}
 
-	<p><a href="/explore/{dataset.path}">{dataset.path}</a></p>
+	<p><a href="/explore/{dataset.slug}">{dataset.name}</a></p>
 
 {/each}
 
