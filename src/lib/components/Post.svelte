@@ -30,7 +30,7 @@
 
     article {
         padding:0;
-        margin:0.3rem;
+        margin:0.8rem;
         /* margin-top:1rem; */
         height: var(--size-post-height);
         /* outline: 2px outset transparent;

@@ -43,6 +43,10 @@ Markup as required
 
 etc...
 
+
+
 ## More reading
 
 If you are not convinced please read my article on [Deaths from natural disasters](/blog/2022/deaths-from-natural-disasters) where I explore how the human species is more resilient than you might think.
+
+[Markdown Guide](https://www.markdownguide.org/cheat-sheet)
