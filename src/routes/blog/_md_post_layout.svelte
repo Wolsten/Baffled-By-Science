@@ -3,6 +3,7 @@
 <script>
     import { fade } from 'svelte/transition'
     import { onMount } from 'svelte'
+
     
     import HeaderImage from '$lib/components/HeaderImage.svelte'
 
@@ -19,8 +20,9 @@
     let created = new Date(date)
     let updated = updatedDate ? new Date(updatedDate) : ''
 
-    // Add id's to all headings
     onMount(()=>{
+
+        // Add id's to all headings
         const headings = document.querySelectorAll('h1,h2,h3,h4,h5,h6')
         // console.log('headings',headings)
         headings.forEach( heading => {
@@ -32,7 +34,22 @@
                 heading.id = id.toLocaleLowerCase()
             }
         })
+        // Add captions to all images and iframes
+        const figures = document.querySelectorAll('.post img, .post iframe')
+        figures.forEach( fig => {
+            const alt = fig.getAttribute('alt')
+            const title = fig.getAttribute('title')
+            if ( alt != '' || title != ''){
+                const figure = document.createElement('figure')
+                figure.innerHTML = fig.outerHTML
+                const caption = document.createElement('figcaption')
+                caption.innerText = alt || title
+                figure.appendChild( caption )
+                fig.replaceWith(figure)
+            }
+        })
     })
+
 </script>
 
 <HeaderImage {title} description={summary} {image} {imageCredit}/>
@@ -89,6 +106,11 @@
     blockquote{
         font-size: 1.2rem;
         line-height: 2rem;
+        margin:2rem 0;
+        padding: 1.8rem 2.4rem;
+        background-color: var(--material-500-blue-grey);
+        color:white;
+        /* border-radius:0.5rem; */
     }
     blockquote:before {
         content: '';

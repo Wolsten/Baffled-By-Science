@@ -1,5 +1,6 @@
 <script>
 
+
     import {mobile} from '$lib/stores.js'
 
     export let post
@@ -7,6 +8,8 @@
     let date = new Date(post.meta.date)
 
     // console.log('post',post)
+
+
     
 </script>
 

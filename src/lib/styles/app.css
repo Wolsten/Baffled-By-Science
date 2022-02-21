@@ -216,19 +216,30 @@ a {
     transition: background-color ease-in 500ms;
 }
 
-img {
+figure {
     display:block;
     max-width: 100%;
+    padding: 0 auto;
+}
+
+figure img {
+    max-width: 100%;
     height:auto;
-    margin: 0 auto;
+}
+
+figcaption {
+    font-style: italic;
+    text-align:center;
+    font-size:0.9rem;
+    font-weight:bold;
 }
 
 iframe.youtube {
     display:block;
-    margin: 2rem auto 3rem auto;
     width:600px;
     height:400px;
     max-width: 100%;
+    margin-bottom:1rem;
 }
 
 
