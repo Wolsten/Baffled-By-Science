@@ -2,16 +2,22 @@
 title: Global warming - a good thing?
 date: 2022-02-20
 summary: The majority of the mainstream media promotes climate alarmism at every opportunity but what if global warming could be good for us?
-image: Full path to image thumb version goes here /images/xxx-thumb.jpg
-imageCredit: Photo credit goes here
+image: /images/liu-sicheng-4-KqFyHKRdo-unsplash-thumb.jpg
+imageCredit: Photo by <a href="https://unsplash.com/@lsc122746?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">liu sicheng</a> on <a href="https://unsplash.com/s/photos/green-trees?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 categories: 
+  - draft
   - climate change
 ---
 
 
+<script>
+  import Figure from '$lib/components/Figure.svelte'
+</script>
+
+
 ## Introduction
 
-[Matt Ridley](https://www.mattridley.co.uk) is a prolific science writer as well as being a member of the UK House of Lords, an unusual combination. Unfortunately, as with the House of Commons, he is greatly outnumbered by science and engineering luddites who hold sway over public policy. Ridley recently wrote an article published in _Spiked Online_ [Why global warming is good for us](https://www.spiked-online.com/2022/02/15/why-global-warming-is-good-for-us/) and made some strong arguments for taking a contrarian view on the current _climate crisis_.
+[Matt Ridley](https://www.mattridley.co.uk) is a prolific science writer as well as being a member of the UK House of Lords, an unusual combination. Unfortunately, as with the House of Commons, he is greatly outnumbered by science and engineering luddites who hold sway over public policy. Ridley recently wrote an article published in _Spiked Online_ [Why global warming is good for us](https://www.spiked-online.com/2022/02/15/why-global-warming-is-good-for-us/) and made some strong arguments for taking a contrarian view on the current _climate crisis_. 
 
 ## The world is getting greener!
 
@@ -21,9 +27,11 @@ Ridley references a [tweet by Bjorn Lomborg](https://twitter.com/BjornLomborg/st
 
 > NASA data show that global greening has added 618,000 square kilometres of extra green leaves each year, equivalent to three Great Britains."
 
-Lomborg draws conclusions from the Nature article [Vegetation structural change since 1981 significantly enhanced the terrestrial carbon sink](https://www.nature.com/articles/s41467-019-12257-8) which states that "Satellite observations show that leaf area index (LAI) has increased globally since 1981".
+Lomborg draws conclusions from the Nature article [Vegetation structural change since 1981 significantly enhanced the terrestrial carbon sink](https://www.nature.com/articles/s41467-019-12257-8) which states that "Satellite observations show that leaf area index (LAI) has increased globally since 1981" and this is illustrated graphically in the following chart: HOLD
 
-![Global map indicating the trend of LAI from 1981 to 2016](/images/41467_2019_12257_Fig1_HTML-1024w.png)
+<Figure type="img" caption="Global map indicating the trend of LAI from 1981 to 2016" source="/images/41467_2019_12257_Fig1_HTML-1024w.png"/>
+
+The green and blue areas denote areas with increased leaf coverage. HOLD
 
 A NASA article [Carbon Dioxide Fertilization Greening Earth, Study Finds, 2016] (https://www.nasa.gov/feature/goddard/2016/carbon-dioxide-fertilization-greening-earth) referring to a separate Nature paper (unfortunately no longer available) emphasises that:
 
@@ -35,8 +43,7 @@ It also goes on to outline the proportion of greening due to CO2 fertilisation (
 
 Assuming an accurate representation of the missing Nature paper we can at least ask _Why isn't this fact covered in the main stream media?_ since it's difficult to understand how a greener world could be a bad thing? Have a look at this NASA video and see what you think.
 
-<iframe class="youtube" src="https://www.youtube.com/embed/zOwHT8yS1XI" title="Rising CO2 levels greening earth" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<Figure type="youtube" caption="Rising CO2 levels greening earth" source="https://www.youtube.com/embed/zOwHT8yS1XI" />
 
 ## Deaths are dropping due to higher temperatures
 
@@ -63,7 +70,7 @@ It's commonly held that increasing temperatures will lead to increased volatilit
 
 Ridley cites both Intergovernmental Panel on Climate Change (IPCC) to back this up and refers back to the geological record which shows that extreme weather was more likely in colder periods.
 
-We no longer experience decade-lon mega droughts, of the sort that ravaged Africa, drying up Lake Victoria at least twice:
+We no longer experience decade-long mega droughts, of the sort that ravaged Africa, drying up Lake Victoria at least twice (as referenced in [The Conversation](https://theconversation.com/in-100-000-years-lake-victoria-has-dried-up-three-times-it-could-happen-again-129361)):
 
 > Those mega droughts happened 17,000 years ago and 15,000 years ago respectively, when the world was much colder than today and cooler oceans meant failed monsoons.
 
@@ -91,12 +98,11 @@ Of course there are the [Malthusians](https://en.wikipedia.org/wiki/Malthusianis
 
 Ridley is open about the challenges of climate change as well as the benefits. One of the scariest tropes put out by climate alarmists is that many parts of the world, particularly coastal areas and small islands are going to disappear under the water in coming years. However, Ridley believes that even here there is room for optimism highlighting this chart from [climatewarmingcentral.com](http://www.climatewarmingcentral.com):
 
-![Post-glacial sea level rise](/images/climatewarmingcentral_sea_level_rise.jpg)
+<Figure type="img" caption="Post-glacial sea level rise" source="/images/climatewarmingcentral_sea_level_rise.jpg"/>
 
 This shows that the sea level shot up between 10,000 and 8,000 years ago, rising by about 60 metres in two millennia, or roughly three metres per century. However, "today the change is nine times slower: 3mm a year, or a foot per century, and with not much sign of acceleration":
 
-![NASA sea level rise since 1993](/images/NASA-Satellite-sea-level-rise-observations.jpg)
-By NASA - https://climate.nasa.gov/vital-signs/sea-level/, Public Domain, https://commons.wikimedia.org/w/index.php?curid=71578292
+<Figure type="img" caption="NASA sea level rise since 1993" source="/images/NASA-Satellite-sea-level-rise-observations.jpg"/>
 
 @todo source
 
@@ -124,7 +130,7 @@ So as Ridley says "No wonder we don’t hear about the good news on climate chan
 5. NASA, Carbon Dioxide Fertilization Greening Earth, Study Finds, 2016, https://www.nasa.gov/feature/goddard/2016/carbon-dioxide-fertilization-greening-earth
 6. Cold weather kills far more people than hot weather, Science News, May 20, 2015, https://www.sciencedaily.com/releases/2015/05/150520193831.htm
 7. Peter J. Richerson, Robert Boyd, and Robert L. Bettinger, Was agriculture impossible during the pleistocene but mandatory during the holocene?, http://www.ceacb.ucl.ac.uk/cultureclub/files/CC2005-12-06-Boyd_Richerson_Bettinger_2001_Agriculture.pdf
-8. 
+8. The Conversation, Jan 26, 2020, https://theconversation.com/in-100-000-years-lake-victoria-has-dried-up-three-times-it-could-happen-again-129361
 
 
 

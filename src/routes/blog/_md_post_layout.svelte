@@ -2,8 +2,6 @@
      specified in svelte.config.js -->
 <script>
     import { fade } from 'svelte/transition'
-    import { onMount } from 'svelte'
-
     
     import HeaderImage from '$lib/components/HeaderImage.svelte'
 
@@ -19,36 +17,6 @@
     // let banner = `/images/${image}`
     let created = new Date(date)
     let updated = updatedDate ? new Date(updatedDate) : ''
-
-    onMount(()=>{
-
-        // Add id's to all headings
-        const headings = document.querySelectorAll('h1,h2,h3,h4,h5,h6')
-        // console.log('headings',headings)
-        headings.forEach( heading => {
-            if ( heading.id === '' ){
-                const id = heading.innerHTML
-                    .replaceAll(' ','-')
-                    .replaceAll("'",'')
-                    .replaceAll('"','')
-                heading.id = id.toLocaleLowerCase()
-            }
-        })
-        // Add captions to all images and iframes
-        const figures = document.querySelectorAll('.post img, .post iframe')
-        figures.forEach( fig => {
-            const alt = fig.getAttribute('alt')
-            const title = fig.getAttribute('title')
-            if ( alt != '' || title != ''){
-                const figure = document.createElement('figure')
-                figure.innerHTML = fig.outerHTML
-                const caption = document.createElement('figcaption')
-                caption.innerText = alt || title
-                figure.appendChild( caption )
-                fig.replaceWith(figure)
-            }
-        })
-    })
 
 </script>
 
@@ -114,6 +82,10 @@
     }
     blockquote:before {
         content: '';
+    }
+
+    :global(.original-figure) {
+        display:none;
     }
 
 </style>

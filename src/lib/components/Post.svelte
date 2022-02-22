@@ -34,22 +34,15 @@
     article {
         padding:0;
         margin:0.8rem;
-        /* margin-top:1rem; */
         height: var(--size-post-height);
-        /* outline: 2px outset transparent;
-        outline-offset: 1px; */
-        max-width: 400px;
-        flex-grow:2;
-        /* grid-column-start: span 1;
-        grid-column-end: auto; */
-        /* Vertical down gradient starting at 10% from top and ending at bottom */
-        /* background-image: linear-gradient( 180deg,  rgba(0,0,0,0) 10%,rgba(0,0,0,0.7) 100%); */
-        /* Vertical down gradient starting at 60% from top and ending at bottom */
+        max-width: 600px;
+        flex-grow:1;
         background-image: linear-gradient( 180deg,  
             rgba(0,0,0,0.7) 0%, 
-            rgba(0,0,0,0.2) 20%, 
             rgba(0,0,0,0) 20%, 
-            rgba(0,0,0,0.5) 60%
+            rgba(0,0,0,0) 55%,
+            rgba(0,0,0,0.5) 70%,
+            rgba(0,0,0,0.7) 100%
         );
         color: var(--colour-post);
     }
@@ -61,15 +54,13 @@
     }
 
     article:hover {
-        /* background-image: linear-gradient(180deg,rgba(0,0,0,0) 10%,rgba(0,0,0,0.9) 100%); */
-        /* background-image: linear-gradient( 180deg,  rgba(0,0,0,0.5) 5%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%); */
         background-image: linear-gradient( 180deg,  
-            rgba(0,0,0,0.6) 0%, 
-            rgba(0,0,0,0.2) 20%, 
+            rgba(0,0,0,0.8) 0%, 
             rgba(0,0,0,0) 20%, 
-            rgba(0,0,0,0.6) 60%
+            rgba(0,0,0,0) 55%,
+            rgba(0,0,0,0.6) 70%,
+            rgba(0,0,0,0.8) 100%
         );
-        /* outline-color: var(--colour-link-hover); */
         color:var(--colour-post-hover);
     }
 
@@ -85,8 +76,11 @@
         margin:0;
         font-size: 0.9rem;
         line-height: 1.2rem;
+
         /* color: var(--colour-post); */
     }
+
+
 
     a {
         position:relative;
@@ -118,5 +112,9 @@
 
     article:hover img {
         transform: scale(110%,110%);
+    }
+
+    article .body p {
+        max-width: 400px;
     }
 </style>

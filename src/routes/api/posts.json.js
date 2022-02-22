@@ -1,13 +1,17 @@
 // posts.json.js
 
+import { dev } from '$app/env'
+
+// console.log('dev',dev)
+
 export const get = async () => {
 
 	// Pull back all files recursively from the blog folder
 	const allPostFiles = import.meta.glob('../blog/**/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 
-    // console.log('allPostFiles',allPostFiles)
-    // console.log('iterablePostFiles',iterablePostFiles)
+    console.log('allPostFiles',allPostFiles)
+    console.log('iterablePostFiles',iterablePostFiles)
 
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
@@ -26,9 +30,18 @@ export const get = async () => {
 		})
 	)
 
+	if ( dev === false ){
+		allPosts = allPosts.filter( post => post.meta.categories.includes('draft') === false)
+	}
+
+	// console.log('allPosts',allPosts)
+
 	const sortedPosts = allPosts.sort((a, b) => {
 		return new Date(b.meta.date) - new Date(a.meta.date)
 	})
+
+	
+
 
 	return {
 		body: sortedPosts

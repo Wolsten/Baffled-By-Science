@@ -71,15 +71,16 @@
     --colour-link: var(--material-800-red);
     --colour-link-hover: var(--material-400-red);
 
-    --colour-menu: var(--material-600-red);
-    --colour-menu-hover: var(--material-300-red);
+    --colour-menu: var(--material-700-blue-grey);
+    --colour-menu-active: var(--material-500-blue-grey);
+    --colour-menu-hover: var(--material-100-blue-grey);
 
     --colour-post: white;
     --colour-post-hover: var(--material-500-yellow);
 
     --colour-box-shadow: var(--material-200-blue-grey);
     
-    --colour-chart-background: var(--material-50-grey);
+    --colour-chart-background: var(--material-100-grey);
     --colour-faint-lines: var(--material-200-blue-grey);
     --colour-legend-highlight: var(--material-200-blue-grey);
 
@@ -94,7 +95,8 @@
 
     --opacity-faint: 0.4;
 
-    --size-post-height: 300px;
+    /* Thumbnails should be sized to 600 x min 450 */
+    --size-post-height: 400px;
     --size-x-padding: 2%;
 
     --size-input-border-radius: 0.4rem;
@@ -216,32 +218,10 @@ a {
     transition: background-color ease-in 500ms;
 }
 
-figure {
-    display:block;
-    max-width: 100%;
-    padding: 0 auto;
+li {
+    font-size: 1rem;
+    line-height: 2rem;
 }
-
-figure img {
-    max-width: 100%;
-    height:auto;
-}
-
-figcaption {
-    font-style: italic;
-    text-align:center;
-    font-size:0.9rem;
-    font-weight:bold;
-}
-
-iframe.youtube {
-    display:block;
-    width:600px;
-    height:400px;
-    max-width: 100%;
-    margin-bottom:1rem;
-}
-
 
 /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
 .wrap-all {

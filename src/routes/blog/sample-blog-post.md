@@ -1,10 +1,11 @@
 ---
 title: A sample post
 date: 2022-01-16
-summary: Gain a better perspective on life by looking at the evolution of life against  the geologic time scale going back over 4 billion years.
+summary: A sample post demonstrating how to insert timelines and figures
 image: images/garrett-butler-eo3cppZxxCA-unsplash-thumb.jpg
 imageCredit: Photo by <a href="https://unsplash.com/@glbutler17?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Garrett Butler</a> on <a href="https://unsplash.com/collections/_Giamd8z4so/baffled-by-science/4aae626d376a8f46f5d4b78d1223a71c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 categories: 
+  - draft
   - disasters
   - geologic
 ---
@@ -25,10 +26,21 @@ categories:
 
 <script>
     import Timeline from '$lib/components/Timeline.svelte'
+    import Figure from '$lib/components/Figure.svelte'
+
     export let dataDisasters
     export let dataGeoTime
     export let dataHumanEvo
 </script>
+
+## Image
+
+<Figure type="img" caption="Global map indicating the trend of LAI from 1981 to 2016" source="/images/41467_2019_12257_Fig1_HTML-1024w.png"/>
+
+## YouTube video
+
+<Figure type="youtube" caption="Rising CO2 levels greening earth" source="https://www.youtube.com/embed/zOwHT8yS1XI" />
+
 
 ## First timeline
 

@@ -95,7 +95,7 @@
         font-size:1.6rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: var(--colour-font-titles);
+        color: var(--colour-meu);
         text-decoration: none;
         cursor:default;
         align-items: center;

@@ -16,6 +16,10 @@
             label: 'Timelines'
         },
         {
+            href: '/credits',
+            label: 'Credits'
+        },
+        {
             href: '/about',
             label: 'About'
         },
@@ -23,14 +27,10 @@
         //     href: '/datasets',
         //     label: 'Datasets'
         // },
-        {
-            href: '/credits',
-            label: 'Credits'
-        },
-        {
-            href: '/contact',
-            label: 'Contact'
-        }
+        // {
+        //     href: '/contact',
+        //     label: 'Contact'
+        // }
     ]
 
     let show = false
@@ -103,16 +103,16 @@
 
     a:hover {
         background-color: var(--colour-menu-hover);
-        color:white;
+        /* color:white; */
     }
 
     a.active {
-        background-color: var(--colour-menu);
+        background-color: var(--colour-menu-active);
         color:white;
         cursor: default;
     }   
 
-    nav.mobile a {
+    /* nav.mobile a {
         background-color: var(--colour-menu);
         color:white;
     }
@@ -124,7 +124,7 @@
     nav.mobile a.active {
         color: var(--colour-menu);
         background-color:var(--colour-background);
-    }
+    } */
 
     .menu-button {
         border-top:6px solid var(--colour-menu);
@@ -152,7 +152,7 @@
 
     .menu-button:hover,
     .menu-button:hover:before {
-        border-color:var(--colour-menu-hover);
+        /* border-color:var(--colour-menu-hover); */
         cursor: pointer;
     }
 
