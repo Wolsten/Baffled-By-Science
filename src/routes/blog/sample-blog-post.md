@@ -1,5 +1,5 @@
 ---
-title: A sample post
+title: A sample post template
 date: 2022-01-16
 summary: A sample post demonstrating how to insert timelines and figures
 image: /images/rephile-water-cuqp2Jzz_lY-unsplash-thumb.jpg
