@@ -74,7 +74,7 @@
         font-size: 1.2rem;
         line-height: 2rem;
         margin:2rem 0;
-        padding: 1.8rem 2.4rem;
+        padding: 1.2rem 2.4rem;
         background-color: var(--material-500-blue-grey);
         color:white;
     }

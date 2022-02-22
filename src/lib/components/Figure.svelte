@@ -46,6 +46,7 @@
         text-align:center;
         font-size:0.9rem;
         font-weight:bold;
+        margin-top:0.3rem;
     }
 
     iframe.youtube {

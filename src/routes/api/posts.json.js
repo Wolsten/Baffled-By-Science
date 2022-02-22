@@ -10,10 +10,10 @@ export const get = async () => {
 	const allPostFiles = import.meta.glob('../blog/**/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 
-    console.log('allPostFiles',allPostFiles)
-    console.log('iterablePostFiles',iterablePostFiles)
+    // console.log('allPostFiles',allPostFiles)
+    // console.log('iterablePostFiles',iterablePostFiles)
 
-	const allPosts = await Promise.all(
+	let allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver()
 
@@ -34,7 +34,7 @@ export const get = async () => {
 		allPosts = allPosts.filter( post => post.meta.categories.includes('draft') === false)
 	}
 
-	// console.log('allPosts',allPosts)
+	console.log('allPosts',allPosts)
 
 	const sortedPosts = allPosts.sort((a, b) => {
 		return new Date(b.meta.date) - new Date(a.meta.date)

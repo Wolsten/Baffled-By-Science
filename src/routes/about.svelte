@@ -61,7 +61,7 @@
     
     <p>If you would like to be kept up to date with posts on this website or have suggestions for corrections or improvements please email me at: <a href="mailto:steve@baffledbyscience.com">steve@baffledbyscience.com</a>.</p>
 
-    <p>You can also follow me on Twitter <a href='https://twitter.com/baffledbysci'>@BaffledBySci</a></p>
+    <p>The best way to keep up to date with new posts is to follow me on Twitter <a href='https://twitter.com/baffledbysci'>@BaffledBySci</a></p>
 
 
     <h2>Copyright</h2>
