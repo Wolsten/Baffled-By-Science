@@ -2,8 +2,8 @@
 title: A sample post
 date: 2022-01-16
 summary: A sample post demonstrating how to insert timelines and figures
-image: images/garrett-butler-eo3cppZxxCA-unsplash-thumb.jpg
-imageCredit: Photo by <a href="https://unsplash.com/@glbutler17?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Garrett Butler</a> on <a href="https://unsplash.com/collections/_Giamd8z4so/baffled-by-science/4aae626d376a8f46f5d4b78d1223a71c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+image: images/rephile-water-cuqp2Jzz_lY-unsplash-thumb.jpg
+imageCredit: Photo by <a href="https://unsplash.com/@revolution_in_filtration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">RephiLe water</a> on <a href="https://unsplash.com/s/photos/laboratory?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 categories: 
   - draft
   - disasters
@@ -11,6 +11,7 @@ categories:
 ---
 
 <script context="module">
+
     import Utils from "$lib/Utils.js"
     export const load = async ({ fetch }) => {
         return {
@@ -32,6 +33,12 @@ categories:
     export let dataGeoTime
     export let dataHumanEvo
 </script>
+
+## Header image
+
+The header image should be min 600px wide and 450px high
+
+
 
 ## Image
 

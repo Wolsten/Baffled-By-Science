@@ -91,6 +91,8 @@
     --colour-toggle-hover-font: white;
     --colour-range-slider-fill: var(--material-100-grey);
 
+    --colour-search-reset-hover: var(--material-500-red);
+
     /* Other custom variables */
 
     --opacity-faint: 0.4;

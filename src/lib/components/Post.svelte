@@ -70,6 +70,7 @@
 
     header h2 {
         margin: 0.5rem 0 0 0;
+        text-transform: uppercase;
     }
 
     header p {

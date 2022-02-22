@@ -25,7 +25,7 @@
             dispatch('clear')
         }}
     >
-        X
+        &#10799;
     </div>
 
 </div>
@@ -65,9 +65,10 @@
 
         text-align: center;
         margin: 0;
-        top:0.3rem;
+        top:0.2rem;
         right:0.5rem;
-        font-size: 0.8rem !important;
+        padding-bottom:0.4rem;
+        font-size: 2rem !important;
     }
 
     div.reset:not([disabled=true]){
@@ -76,8 +77,7 @@
 
     div.reset:not([disabled=true]):hover {
         cursor: pointer;
-        background-color:var(--colour-toggle-hover);
-        color:white;
+        color:var(--colour-search-reset-hover);
     }
 
 </style>

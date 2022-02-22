@@ -68,7 +68,6 @@
     p.dates {
         margin-top:0;
         font-style: italic;
-        /* font-weight: bold; */
     }
 
     blockquote{
@@ -78,7 +77,6 @@
         padding: 1.8rem 2.4rem;
         background-color: var(--material-500-blue-grey);
         color:white;
-        /* border-radius:0.5rem; */
     }
     blockquote:before {
         content: '';
