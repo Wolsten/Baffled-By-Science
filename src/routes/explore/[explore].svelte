@@ -15,7 +15,7 @@
 
 <script>
 
-    import Timeline from '$lib/components/Timeline.svelte'
+    import Timeline from '$lib/Timeline/Timeline.svelte'
     import HeaderImage from '$lib/components/HeaderImage.svelte'
 
     export let data

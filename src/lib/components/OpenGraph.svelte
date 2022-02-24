@@ -6,7 +6,7 @@
     export let description = "For those frustrated by media coverage of science and technology and how it is translated into policy by government."
     export let image = '/images/jr-korpa-fi5FPDZ6tns-unsplash-thumb.jpg'
 
-    const SITE = 'http://baffledbyscience.com'
+    const SITE = 'https://baffledbyscience.com'
     const PATH = $page.url.pathname
     const URL = SITE + PATH
 

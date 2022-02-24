@@ -4,6 +4,7 @@
     import { fade } from 'svelte/transition'
     
     import HeaderImage from '$lib/components/HeaderImage.svelte'
+    import Comments from '$lib/components/Comments.svelte'
 
     // Pull in meta data from frontmatter in each markdown blog post
     export let title
@@ -43,7 +44,11 @@
         <slot />
     </div>
 
+    <Comments />
+
 </div>
+
+
 
 
 

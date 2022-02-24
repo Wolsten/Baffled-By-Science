@@ -1,7 +1,7 @@
 <script>
 
     import Utils from '$lib/Utils'
-    import Event from '$lib/components/Event.svelte'
+    import Event from '$lib/Timeline/Event.svelte'
 
     export let events
     export let options

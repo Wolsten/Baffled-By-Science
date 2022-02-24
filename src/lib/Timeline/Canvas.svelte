@@ -10,7 +10,7 @@
     import { fade } from 'svelte/transition'
 
     import Utils from '$lib/Utils.js'
-    import Symbol from '$lib/components/Symbol.svelte'
+    import Symbol from '$lib/Timeline/Symbol.svelte'
 
     export let options
     export let series   // Array of multiple series

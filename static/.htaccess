@@ -1,6 +1,26 @@
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule (.*) /404
-ErrorDocument 404 /404
+
+# http://glennmessersmith.com/pages/wphtaccess.html
+
+# 1and1
+<IfModule mod_rewrite.c>
+
+    # THIS DID NOT WORK TO FIX MYSQL TIMEZONE PROBLEM
+    # https://www.hostinger.com/tutorials/htaccess/how-to-change-timezone-using-htaccess
+    # SetEnv TZ UTC
+
+    RewriteEngine On
+
+    # Redirect all calls to use https with SSL certificate installed
+    # These two lines provided by 1and1 support
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*) /404
+    ErrorDocument 404 /404
+    
+</IfModule>

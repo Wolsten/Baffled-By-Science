@@ -10,7 +10,7 @@
 
     <h1>About this blog</h1>
 
-    <p>This blog is for those of us who get frustrated by what we read and hear in the media about science and technology and the way in which it is translated into policy by government. My background is in physics and Information Technology and now I am semi-retired I have more time to think about a broader range of subjects. I don't claim to be an expert on anything but I have the luxury of time to explore things that many people don't and so hope to provide new insights which may be useful.</p>
+    <p>This blog is for those of us who get frustrated by what we read and hear in the media about science and technology and the way it is translated into policy by government. My background is in physics and Information Technology and now I am semi-retired I have more time to think about a broader range of subjects. I don't claim to be an expert on anything but I have the luxury of time to explore things that many people don't and so hope to provide new insights which may be useful.</p>
 
     <p>I aim to cover a wide variety of topics with an emphasis on understanding what data tells us about the world today. By looking at long term historical trends I will show that there is often a much more positive outlook for the world than you might believe from the relentless diet of doom and gloom clickbait journalism produced by the mainstream media. Inevitably some of the conclusions may make uncomfortable reading since the gap between the media narrative and reality can be surprisingly large.</p>
 

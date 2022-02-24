@@ -2,7 +2,7 @@
 
     import { createEventDispatcher } from 'svelte'      
 
-    import Symbol from '$lib/components/Symbol.svelte'
+    import Symbol from '$lib/Timeline/Symbol.svelte'
     import Utils from '$lib/Utils'
 
     // export let seriesSubCats

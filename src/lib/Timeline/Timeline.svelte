@@ -2,16 +2,16 @@
     import {onMount} from 'svelte'
 
     import Utils from "$lib/Utils.js"
-    import Axes from '$lib/components/Axes.svelte'
-	import Events from '$lib/components/Events.svelte'
-    import Canvas from '$lib/components/Canvas.svelte'
-    import Legend from '$lib/components/Legend.svelte'
-	import Options from '$lib/components/Options.svelte'
-    import EventProperties from '$lib/components/EventProperties.svelte'
-    import CanvasProperties from '$lib/components/CanvasProperties.svelte'
-    import Caption from '$lib/components/Caption.svelte'
-    import XRange from '$lib/components/XRange.svelte'
-    import DebugTimeline from "$lib/components/DebugTimeline.svelte"
+    import Axes from '$lib/Timeline/Axes.svelte'
+	import Events from '$lib/Timeline/Events.svelte'
+    import Canvas from '$lib/Timeline/Canvas.svelte'
+    import Legend from '$lib/Timeline/Legend.svelte'
+	import Options from '$lib/Timeline/Options.svelte'
+    import EventProperties from '$lib/Timeline/EventProperties.svelte'
+    import CanvasProperties from '$lib/Timeline/CanvasProperties.svelte'
+    import Caption from '$lib/Timeline/Caption.svelte'
+    import XRange from '$lib/Timeline/XRange.svelte'
+    // import DebugTimeline from "$lib/Timeline/DebugTimeline.svelte"
     import {windowWidth, touch} from '$lib/stores'
 
     export let data

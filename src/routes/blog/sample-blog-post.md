@@ -26,7 +26,7 @@ categories:
 
 
 <script>
-    import Timeline from '$lib/components/Timeline.svelte'
+    import Timeline from '$lib/Timeline/Timeline.svelte'
     import Figure from '$lib/components/Figure.svelte'
 
     export let dataDisasters

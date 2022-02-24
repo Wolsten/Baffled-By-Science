@@ -23,7 +23,7 @@ categories:
 
 
 <script>
-    import Timeline from '$lib/components/Timeline.svelte'
+    import Timeline from '$lib/Timeline/Timeline.svelte'
     export let dataGeoTime
     export let dataHumanEvo
 </script>
