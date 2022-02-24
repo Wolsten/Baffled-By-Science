@@ -57,15 +57,8 @@
     </p>
 
     
-    <h2>Contact me</h2>
-    
-    <p>If you would like to be kept up to date with posts on this website or have suggestions for corrections or improvements please email me at: <a href="mailto:steve@baffledbyscience.com">steve@baffledbyscience.com</a>.</p>
-
-    <p>The best way to keep up to date with new posts is to follow me on Twitter <a href='https://twitter.com/baffledbysci'>@BaffledBySci</a></p>
-
-
     <h2>Copyright</h2>
 
-    <p>I assert copyright on all material on this web site with the exception of material explicitly credited, such as many of the images. If I have missed any credits please let me know and I will update the website accordingly.</p>
+    <p>I assert copyright on all material on this web site with the exception of material explicitly credited, such as many of the images. If I have missed any credits <a href="/contact">please let me know</a> and I will update the website accordingly.</p>
 
 </div>

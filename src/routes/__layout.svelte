@@ -10,6 +10,8 @@
     let path = ''
     let nav = {}
     let container
+    let date = new Date()
+
 
     onMount(()=>{
         path = $page.url.pathname
@@ -39,45 +41,57 @@
 
 <svelte:window on:resize={handleResize}/>
 
-<div class="container" on:click={resetMenu} bind:this={container}>
+<!-- <div class="container" on:click={resetMenu} bind:this={container}> -->
 
-    <header>
+<header>
 
-        <span class="logo">
-            <a href="/" class:clickable="{path != '/'}">
-                <img src="/blog-logo-50x50.png" alt="logo"> <span>Baffled By Science</span>
-            </a>
-        </span>
+    <span class="logo">
+        <a href="/" class:clickable="{path != '/'}">
+            <img src="/blog-logo-50x50.png" alt="logo"> <span>Baffled By Science</span>
+        </a>
+    </span>
 
-        <Navigator {path} {nav}/>
+    <Navigator {path} {nav}/>
 
-    </header>
+</header>
 
-    <main >
-        <slot/>
-    </main>
+<main on:click={resetMenu} bind:this={container}>
+    <slot/>
+</main>
 
-</div>
+<footer>
+
+    <p>&#169; Copyright {date.getFullYear()}</p>
+
+    <p><a href="/contact">Contact Me / Sign up</a></p>
+
+</footer>
 
 
 <style>
 
-    .container {
+    main {
+    /* .container { */
         position:relative;
         display:flex;
         flex-direction: column;
         align-items: center;
-        height:100vh;
+        /* height:100vh; */
         width:100%;
     }
 
     header {
+        position:sticky;
+        top:0;
+        left:0;
         display:flex;
         justify-content: space-between;
         align-items: center;
         width:100%;
         min-height:70px;
         padding:1rem;
+        background-color: var(--colour-background);
+        z-index: 2;
     }
 
     span.logo {
@@ -88,6 +102,7 @@
         margin:0;
         max-width: 80%;
         position:relative;
+        z-index: 2;
     }
 
     span.logo a {
@@ -112,8 +127,23 @@
     }
 
     main {
+        position:relative;
         padding-bottom: 4rem;
         width:100%;
+        z-index: 1;
+    }
+
+
+    footer {
+        width:100%;
+        position:sticky;
+        display:flex;
+        left:0;
+        bottom:0;
+        z-index: 2;
+        justify-content: space-between;
+        padding:1rem;
+        background-color: var(--colour-background);
     }
 
 </style>
