@@ -16,12 +16,45 @@
     onMount(()=>{
         path = $page.url.pathname
         handleResize()
+        addHeadingIds()
     })
 
     afterUpdate(()=>{
         path = $page.url.pathname
         // console.log('afterUpdate path',path)
     })
+
+    function addHeadingIds(){
+        const headings = document.querySelectorAll('main h1, main h2, main h3')
+        headings.forEach( h => {
+            const id = h.innerText
+                .replaceAll(' ','-')
+                .replaceAll("'",'')
+                .replaceAll('(','')
+                .replaceAll(')','')
+                .toLowerCase()
+            h.id = id
+        })
+        const anchors = document.querySelectorAll('main a')
+        anchors.forEach( a => {
+            // console.log('Found link', a.href)
+            // @todo - need to check not an off page link, or to another website
+            if ( (a.href.includes('localhost') || a.href.includes(Utils.SITE)) && a.href.includes('#') ){
+                a.addEventListener( 'click', handleHashNav)
+            }
+        })
+    }
+
+    function handleHashNav(event){
+        event.preventDefault()
+        event.stopPropagation()
+        const id = new URL(event.target.href).hash.substring(1)
+        const target = document.getElementById(id)
+        target.scrollIntoView({behavior: "smooth"})
+        target.classList.add('scrolled-into-view')
+        setTimeout( () => target.classList.add('show'), 1000)
+        console.log(target)
+    }
 
     function handleResize(){
         $windowWidth = container.clientWidth
@@ -144,6 +177,23 @@
         justify-content: space-between;
         padding:1rem;
         background-color: var(--colour-background);
+    }
+
+    :global( .scrolled-into-view ){
+        position:relative;
+    }
+
+    :global( .scrolled-into-view:before ){
+        content:'\1F449';
+        position: absolute;
+        left:-10rem;
+        opacity:0;
+        transition: all ease-in-out 600ms;
+    }
+
+    :global(.scrolled-into-view.show:before){
+        opacity:1;
+        left:-2rem;
     }
 
 </style>

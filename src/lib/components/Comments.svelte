@@ -27,5 +27,7 @@
       targetTag.appendChild(utteranceScript)
     })
   </script>
+
+  <h2>Comments</h2>
   
   <div id="utterances-comments" />

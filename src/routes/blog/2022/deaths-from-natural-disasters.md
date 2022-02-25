@@ -28,7 +28,7 @@ categories:
 
 ## Summary
 
-In this post we will look at why there is room for optimism by taking a detailed look at some long term natural disaster data collated by Hannah Ritchie and Max Roser at Our World In Data <sup>[1](#references)</sup>. You may be surprised at the results.
+In this post we will look at why there is room for optimism by taking a detailed look at some long term natural disaster data collated by Hannah Ritchie and Max Roser at Our World In Data <sup>[[1]](#references)</sup>. You may be surprised at the results.
 
 ## Data analysis
 

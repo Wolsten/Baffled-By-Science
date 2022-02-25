@@ -536,7 +536,8 @@ const Utils = {
 	CANVAS_MIN_HEIGHT: 200,
 	CANVAS_PADDING_LEFT: 20,
 	CANVAS_PADDING_RIGHT: 20,
-	NAV_BREAK: 600
+	NAV_BREAK: 600,
+	SITE: 'https://baffledbyscience.com'
 }
 
 export default Utils

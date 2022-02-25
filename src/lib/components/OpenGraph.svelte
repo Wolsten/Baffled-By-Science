@@ -1,14 +1,14 @@
 <script>
 
     import { page } from '$app/stores'
+    import Utils from '$lib/Utils.js'
 
     export let title = "Baffled by Science"
     export let description = "For those frustrated by media coverage of science and technology and how it is translated into policy by government."
     export let image = '/images/jr-korpa-fi5FPDZ6tns-unsplash-thumb.jpg'
-
-    const SITE = 'https://baffledbyscience.com'
+    
     const PATH = $page.url.pathname
-    const URL = SITE + PATH
+    const URL = Utils.SITE + PATH
 
     // console.log('page',$page)
 
@@ -25,7 +25,7 @@
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={URL} />
-    <meta property="og:image" content={SITE+image} />
+    <meta property="og:image" content={Utils.SITE+image} />
     <!-- Twitter card data. Validator: 
          https://cards-dev.twitter.com/validator -->
     <meta name="twitter:card" content="summary" />
