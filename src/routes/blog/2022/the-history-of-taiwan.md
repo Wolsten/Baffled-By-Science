@@ -5,6 +5,7 @@ summary: With geopolitical tensions arising around the world and the focus on th
 image: /images/tom-ritson-ehf8SFStOvM-unsplash-thumb.jpg
 imageCredit: Photo by <a href="https://unsplash.com/@ritsxn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tom Ritson</a> on <a href="https://unsplash.com/s/photos/taiwan-culture?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 categories: 
+  - taiwan
   - history
   - geopolitics
 ---
