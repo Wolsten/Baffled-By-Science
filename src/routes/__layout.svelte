@@ -9,7 +9,7 @@
 
     let path = ''
     let nav = {}
-    let container
+    let main
     let date = new Date()
 
 
@@ -57,9 +57,10 @@
     }
 
     function handleResize(){
-        $windowWidth = container.clientWidth
+        $windowWidth = main.clientWidth
         $mobile = $windowWidth < Utils.NAV_BREAK
         $desktop = !$mobile
+
         // console.log('$windowWidth',$windowWidth)
         // console.log('$desktop',$desktop)
         // console.log('$mobile',$mobile)
@@ -88,15 +89,15 @@
 
 </header>
 
-<main on:click={resetMenu} bind:this={container}>
+<main on:click={resetMenu} bind:this={main}>
     <slot/>
 </main>
 
 <footer>
 
-    <p>&#169; Copyright {date.getFullYear()}</p>
+    <p><a href="/copyright" title="Open copyright statement">&#169; Copyright {date.getFullYear()}</a></p>
 
-    <p><a href="/contact">Contact Me / Sign up</a></p>
+    <p><a href="/credits" title="Credits for all sources of information, images and videos">Credits</a></p>
 
 </footer>
 
@@ -104,12 +105,10 @@
 <style>
 
     main {
-    /* .container { */
         position:relative;
         display:flex;
         flex-direction: column;
         align-items: center;
-        /* height:100vh; */
         width:100%;
     }
 
@@ -175,7 +174,7 @@
         bottom:0;
         z-index: 2;
         justify-content: space-between;
-        padding:1rem;
+        padding:1rem 2rem;
         background-color: var(--colour-background);
     }
 

@@ -9,6 +9,8 @@
     export let viewportWidth
     export let drawingWidth
 
+    // console.table(xAxis)
+
     const AXIS_HEIGHT = 30
     const MAJOR_TICK_Y1 = -4
     const MAJOR_TICK_Y2 = 6
@@ -23,7 +25,7 @@
 <!------------------------------------------------------------------------------
 @section HTML
 -------------------------------------------------------------------------------->
-<!-- <p>width={width}, drawingWidth={drawingWidth}, nTicks={xAxis.majorTicks.length}</p> -->
+<!-- <p>viewportWidth={viewportWidth}, drawingWidth={drawingWidth}, nTicks={xAxis.majorTicks.length}</p> -->
 
 <svg class="axis" width={viewportWidth} height={AXIS_HEIGHT} transition:fade>
 

@@ -16,8 +16,8 @@
             label: 'Timelines'
         },
         {
-            href: '/credits',
-            label: 'Credits'
+            href: '/contact',
+            label: 'Contact'
         },
         {
             href: '/about',

@@ -30,7 +30,7 @@
         series : []
     }
     
-    console.log('data',data, '\noptions', options)
+    // console.log('data',data, '\noptions', options)
 
     let viewport
     let viewportWidth = 0
@@ -248,7 +248,7 @@
 <style>
 
     figure {
-        margin:0;
+        margin:3rem 0;
         width:100%;
         overflow:hidden;
     }

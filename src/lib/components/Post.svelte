@@ -5,7 +5,11 @@
 
     export let post
 
-    let date = new Date(post.meta.date)
+    // console.table(post.meta)
+
+    const date = new Date(post.meta.date)
+    const status = post.meta?.categories?.includes('draft') ? 'DRAFT' : 'Published'
+    // const status = 'Published'
 
     // console.log('post',post)
 
@@ -20,7 +24,7 @@
         <img src={post.meta.image} alt="" />
         <header>
             <h2>{post.meta.title}</h2>
-            <p>Published {date.toLocaleDateString()}</p>
+            <p>{status} {date.toLocaleDateString()}</p>
         </header>
         <div class="body">
             <p>{post.meta.summary}</p>

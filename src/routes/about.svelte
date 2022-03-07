@@ -55,10 +55,5 @@
     <br>
         7th Jan 2022, Manchester, UK
     </p>
-
-    
-    <h2>Copyright</h2>
-
-    <p>I assert copyright on all material on this web site with the exception of material explicitly credited, such as many of the images. If I have missed any credits <a href="/contact">please let me know</a> and I will update the website accordingly.</p>
-
+  
 </div>

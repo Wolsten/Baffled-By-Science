@@ -8,7 +8,7 @@
     export let viewportWidth
     export let size
 
-    console.error('events',events)
+    // console.error('events',events)
     
     const MIN_HEIGHT = 100
     const EVENT_HEIGHT = 20

@@ -454,31 +454,36 @@ const processSeries = function(set, scale, startValue, endValue){
 const labelAxis = function( xAxis, paddingLeft, drawingWidth, range){
 
 	// console.log('labelAxis: range',range)
+	const intervals = Math.floor(drawingWidth/Utils.MIN_BOX_WIDTH)
+	const intervalWidth = drawingWidth / intervals  
+	const interval = range.range / intervals   
 
+	let x = paddingLeft
+	let units = range.start
 	let newAxis = { ...xAxis}
 
+	// Initialise values, ticks and labels
 	newAxis.majorAxis = []
 	newAxis.majorTicks = []
 	newAxis.majorLabels = []
-
-	let x = paddingLeft
-	let start = range.start
-
-	const intervals = Math.floor(drawingWidth/Utils.MIN_BOX_WIDTH)
-	const intervalWidth = parseInt(drawingWidth / intervals)
-	const interval = parseInt(range.range / intervals)
 		
-	for( let i=0; i<intervals+1; i++ ){
+	for( let i=0; i<=intervals; i++ ){
 
 		newAxis.majorTicks.push(parseInt(x))
-		newAxis.majorAxis.push(start)
 
-		const formatted = xAxis.xUnit=='date' ? formatYear(start) : start
-		newAxis.majorLabels.push(formatted)
+		if ( xAxis.xUnit=='date' ){
+			newAxis.majorAxis.push( parseInt(units) )
+			newAxis.majorLabels.push( formatYear(parseInt(units)) )
+		} else {
+			newAxis.majorAxis.push( units )
+			newAxis.majorLabels.push( units )
+		}
 
 		x += intervalWidth
-		start += interval
+		units += interval
 	}
+
+	// console.table(newAxis)
 
 	return newAxis
 }
@@ -534,8 +539,8 @@ const Utils = {
 	COLOUR_INACTIVE: 'var(--material-grey-400)',
 	MIN_BOX_WIDTH: 80,
 	CANVAS_MIN_HEIGHT: 200,
-	CANVAS_PADDING_LEFT: 20,
-	CANVAS_PADDING_RIGHT: 20,
+	CANVAS_PADDING_LEFT: 20,  // 20
+	CANVAS_PADDING_RIGHT: 20,  // 20
 	NAV_BREAK: 600,
 	SITE: 'https://baffledbyscience.com'
 }

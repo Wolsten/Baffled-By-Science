@@ -10,15 +10,20 @@ import { createEventDispatcher } from 'svelte'
     export let paddingLeft
     export let paddingRight
 
+    // console.table(options)
+
     const dispatch = createEventDispatcher()
 
-    // Save the origibal axis
+    // Save the original axis
     let fullAxis = {...xAxis}
+
+    // console.table(fullAxis)
 
     let minValue = 0
     let maxValue = fullAxis.majorAxis.length - 1
     let start = 0
     let end = 0
+
 
     $: if ( xAxis ) setValues()
 
@@ -28,6 +33,8 @@ import { createEventDispatcher } from 'svelte'
         start = options.xRange.start
         end = options.xRange.end
 
+        console.log('max',maxValue)
+
         // console.log('start',start)
         // console.log('end',end)
 
@@ -35,6 +42,7 @@ import { createEventDispatcher } from 'svelte'
             if ( start >= fullAxis.majorAxis[i] ){
                 // console.log('start',start, 'major',fullAxis.majorAxis[i])
                 minValue = i
+                console.log('minValue',minValue)
             }
         }
 
@@ -45,6 +53,8 @@ import { createEventDispatcher } from 'svelte'
                 break;
             }
         }
+
+        console.log('max',maxValue)
 
         // console.log('majorAxis, min & max values', fullAxis.majorAxis, minValue, maxValue)
     }

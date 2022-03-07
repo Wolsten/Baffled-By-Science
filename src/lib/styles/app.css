@@ -216,6 +216,12 @@ sup {
     text-align:justify;
 }
 
+@media (max-width:600px){
+    .page-container {
+        max-width:100%;
+    }
+}
+
 button,
 a {
     transition: background-color ease-in 500ms;
