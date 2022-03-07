@@ -233,6 +233,7 @@ li {
 }
 
 /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+a,
 .wrap-all {
     /* These are technically the same, but use both */
     overflow-wrap: break-word;
