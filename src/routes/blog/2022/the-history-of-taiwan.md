@@ -35,7 +35,7 @@ As a schoolboy I loved history and in particular the way it was brought to life 
 
 This also meant dropping other interesting subjects including languages and geography but strangely enough there was time for something called *General Studies*. I can't remember a thing about it and in modern times I would strongly argue against compulsory subjects which crowd out more *useful* ones.
 
-Anyway, getting back to today, the current situation in the Ukraine is very worrying and exacerbated by weak governments around the world and disarray in  global institutions like NATO. Unfortunately, this means that Taiwan is in more danger from China than has been the case for many years. Thinking about this, I realised that I knew next to nothing about the history of Taiwan and that this needed to be rectified.
+Anyway, getting back to today, the current [crisis in the Ukraine](/blog/2022/the-crisis-in-ukraine) is very worrying and exacerbated by weak governments around the world and disarray in  global institutions like NATO. Unfortunately, this means that Taiwan is in more danger from China than has been the case for many years. Thinking about this, I realised that I knew next to nothing about the history of Taiwan and that this needed to be rectified.
 
 Therefore I have put together the following timeline which shows the birth and development of modern Taiwan using data taken from the Taiwan government's website and Wikipedia. Taiwan has been home to Malayo-Polynesian peoples for many millenniums. It is commonly believed that in the 1500's Portuguese sailors passing Taiwan recorded the island’s name as Ilha Formosa, or beautiful island, and I have begun our timeline in this period.
 
