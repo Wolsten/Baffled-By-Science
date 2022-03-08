@@ -160,7 +160,7 @@
 
     main {
         position:relative;
-        padding-bottom: 4rem;
+        /* padding-bottom: 4rem; */
         width:100%;
         z-index: 1;
     }
@@ -168,14 +168,24 @@
 
     footer {
         width:100%;
-        position:sticky;
         display:flex;
         left:0;
         bottom:0;
         z-index: 2;
         justify-content: space-between;
-        padding:1rem 2rem;
-        background-color: var(--colour-background);
+        padding:0 1.4rem 0 1.4rem;
+        background-color: var(--colour-menu-active);
+        /* border: 1px solid red; */
+    }
+
+    footer a,
+    footer a:visited {
+        text-decoration: none;
+        color:var(--colour-background);
+    }
+
+    footer a:hover {
+        color:var(--colour-yellow);
     }
 
     :global( .scrolled-into-view ){

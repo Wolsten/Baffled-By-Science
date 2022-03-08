@@ -21,9 +21,9 @@
 
     <p>You can also follow me on Twitter <a href='https://twitter.com/baffledbysci'>@BaffledBySci</a></p>
 
-    <h2>Sign up for notifications</h2>
+    <h2>Sign up for email notifications</h2>
 
-    <p>Sign up using MailChimp to receive notifications about new content added to this site. You can opt out at any time.</p>
+    <p>Sign up using MailChimp to receive notifications about new content added to this site. I won't send these out more than once a week and you can opt out at any time. When you sign up you will receive an email for you to confirm your email address.</p>
 
     <MailChimp />
     

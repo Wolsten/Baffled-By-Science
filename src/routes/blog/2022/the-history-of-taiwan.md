@@ -16,7 +16,7 @@ categories:
     export const load = async ({ fetch }) => {
         return {
             props: {
-                history: await Utils.fetchDataset( fetch, 'history-of-taiwan'), 
+                data: await Utils.fetchDataset( fetch, 'history-of-taiwan'), 
             }
         }
     }
@@ -25,7 +25,7 @@ categories:
 
 <script>
     import Timeline from '$lib/Timeline/Timeline.svelte'
-    export let history
+    export let data
 </script>
 
 
@@ -40,7 +40,7 @@ Anyway, getting back to today, the current [crisis in the Ukraine](/blog/2022/th
 Therefore I have put together the following timeline which shows the birth and development of modern Taiwan using data taken from the Taiwan government's website and Wikipedia. Taiwan has been home to Malayo-Polynesian peoples for many millenniums. It is commonly believed that in the 1500's Portuguese sailors passing Taiwan recorded the island’s name as Ilha Formosa, or beautiful island, and I have begun our timeline in this period.
 
 <Timeline 
-    data={history}
+    data={data}
     settings={{
         readonly:true
     }}
@@ -51,7 +51,7 @@ After successive early invasions by the Dutch East India Company and the Spanish
 We can look in more detail at the modern period for the ROC and the PRC.
 
 <Timeline 
-    data={history}
+    data={data}
     settings={{
         readonly:true,
         xRange: {

@@ -27,8 +27,8 @@
         const paddingLeft = window.getComputedStyle(container).getPropertyValue('padding-left')
         const paddingRight = window.getComputedStyle(container).getPropertyValue('padding-right')
         const padding = parseInt(paddingLeft.slice(0,-2)) + parseInt(paddingRight.slice(0,-2))
-        console.log('padding',padding)
-        console.log('width',container.clientWidth)
+        // console.log('padding',padding)
+        // console.log('width',container.clientWidth)
         $containerWidth = container.clientWidth - padding
     }
 
