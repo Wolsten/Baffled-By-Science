@@ -163,7 +163,7 @@ Longer term all western governments need to:
 4. Marc Sidwell, The Long March: How the left won the culture war and what to do about it, 22nd July 2020, https://www.amazon.co.uk/Long-March-left-culture-about-ebook/dp/B08DJ7ZH92
 5. Konstantin Kisin and Francis Foster, The Triggernometry Podcast, https://www.triggerpod.co.uk
 6. Michael Shellenburger, The West’s Green Delusions Empowered Putin, Common Sense, 1st March 2022, https://bariweiss.substack.com/p/the-wests-green-delusions-empowered
-7. Isabelle Kirk, More than a third of Britons cannot afford to heat their home to a comfortable level, YouGov, 26th Jan 2022
+7. Isabelle Kirk, More than a third of Britons cannot afford to heat their home to a comfortable level, YouGov, 26th Jan 2022, https://yougov.co.uk/topics/politics/articles-reports/2022/01/26/more-third-britons-cannot-afford-heat-their-home-c
 
 
 
