@@ -18,7 +18,7 @@
     export let history = []
 
     // Version history
-    let created = ''
+    let created = 'date missing'
     let updated = false
     let versions = []
     let showVersionHistory = false
@@ -76,7 +76,7 @@
                       title="{showVersionHistory?'Hide version history':'Show version history'}"
                       transition:fade
                       on:click={()=>showVersionHistory=!showVersionHistory}>
-                    {showVersionHistory?'-hide':'+show'} history
+                    {showVersionHistory?'- hide':'+ show'} history
                 </span>
                 {#if showVersionHistory}
                     <dl transition:slide>
@@ -130,6 +130,7 @@
         font-style: normal;
         cursor: pointer;
         color: var(--colour-link);
+        padding-left:1rem;
     }
 
     dl {

@@ -187,7 +187,7 @@
 
 <figure class="timeline">
 
-    <div class="timeline-content">
+    <div class="timeline-content" class:clickable on:click|stopPropagation={handleClick}>
 
         {#if options.readonly}
 
@@ -200,7 +200,7 @@
                     on:optionsChanged={handleOptions}/>
         {/if}
 
-        <div class:clickable on:click|stopPropagation={handleClick}>
+        <div >
 
             <div class="viewport" bind:this={viewport}>
 
