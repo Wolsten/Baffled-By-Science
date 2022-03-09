@@ -104,6 +104,7 @@
         }
     }
 
+    $: clickable = options.selectedEvent !== false || options.selectedPoint !== false
 
     function handleClick(){
         // console.error('Handling timeline click in dataset',data.name)
@@ -199,7 +200,7 @@
                     on:optionsChanged={handleOptions}/>
         {/if}
 
-        <div class="clickable" on:click|stopPropagation={handleClick}>
+        <div class:clickable on:click|stopPropagation={handleClick}>
 
             <div class="viewport" bind:this={viewport}>
 
@@ -267,6 +268,10 @@
         overflow:hidden;
         margin:0;
         padding:0;
+    }
+
+    .clickable {
+        cursor:zoom-out;
     }
 
 </style>

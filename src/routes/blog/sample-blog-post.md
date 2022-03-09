@@ -1,6 +1,5 @@
 ---
 title: A sample post template
-date: 2022-01-16
 summary: A sample post demonstrating how to insert timelines and figures
 image: /images/rephile-water-cuqp2Jzz_lY-unsplash-thumb.jpg
 imageCredit: Photo by <a href="https://unsplash.com/@revolution_in_filtration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">RephiLe water</a> on <a href="https://unsplash.com/s/photos/laboratory?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -8,6 +7,8 @@ categories:
   - draft
   - disasters
   - geologic
+history:
+  - 2022-01-16 § ***DRAFT***
 ---
 
 <script context="module">

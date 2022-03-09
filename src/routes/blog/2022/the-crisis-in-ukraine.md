@@ -1,6 +1,5 @@
 ---
 title: The Crisis in Ukraine
-date: 2022-03-07
 summary: Laying out the historical events leading to the current invasion of Ukraine by Russia and what we should do next
 image: /images/joel-in-t-veld-KC8SKA9rUDA-unsplash-thumb.jpg
 imageCredit: Photo by <a href="https://unsplash.com/@photographer_in_wheelchair?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joël in 't Veld</a> on <a href="https://unsplash.com/s/photos/war?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -8,12 +7,14 @@ categories:
   - ukraine
   - history
   - geopolitics
+history:
+  - 2022-03-07 § Published.
+  - 2022-03-09 § Added additional events, expanded introduction, added expanded timeline, extended commentary.
 ---
 
 
 <script context="module">
     import Utils from "$lib/Utils.js"
-    import Figure from "$lib/components/Figure.svelte"
     export const load = async ({ fetch }) => {
         return {
             props: {
@@ -26,13 +27,16 @@ categories:
 
 <script>
     import Timeline from '$lib/Timeline/Timeline.svelte'
+    import Figure from "$lib/components/Figure.svelte"
     export let history
 </script>
 
 
 ## Introduction
 
-As we watch the horrific events in Ukraine I am reminded again that my grasp of  history is lacking, hence this post which lays out the key events in the development of Ukraine. I have relied heavily on Wikipedia which is not always the most reliable source of information. I am happy to be corrected in the comments below and will try to update this post to address any factual errors or omission of important events.
+As we watch the horrific events in Ukraine I am reminded again that my grasp of history is lacking, hence this post which lays out the key events in the development of Ukraine. I have relied heavily on Wikipedia which is not always the most reliable source of information. I am happy to be corrected in the comments below and will try to update this post to address any factual errors or omission of important events.
+
+I will cover the historical timeline of historical changes in the region, explore the geopolitical context, examine the west's failed energy policy (a major enabler of the invasion) and other drivers, highlight some longer term potential benefits which may come about and finally conclude what we should do next. 
 
 ## Timeline and map of Europe
 
@@ -51,6 +55,22 @@ If you look at the map of Europe it's easy to understand why this region has str
     type="googlemap"
     source="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11031962.477847895!2d14.214590048002387!3d47.54151224677918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1646056947312!5m2!1sen!2suk"
     caption="Map of Europe, courtesy Google Maps"/>
+
+Concentrating on the timeline from 1900 to the present we can see that state of Ukraine had a troubled birth from the Russian Empire, hence Putin's recent spurious claim that [it is not a real country distinct from Russia](https://www.msn.com/en-in/news/world/full-text-of-vladimir-putins-speech-announcing-special-military-operation-in-ukraine/ar-AAUftE2).
+
+<Timeline 
+    data={history}
+    settings={{
+        readonly:true,
+        xRange: {
+            start: 1900,
+            end: 2022
+        }
+    }}
+/> 
+
+Some key events in modern times include the Budapest Memorandum which was an international agreement to de-nuclearise Ukraine in return for peaceful cooperation with Russia and the West. This left Ukraine with no nuclear weapons and in the end no real _legal binding_ protection from the West. It also began discussions to join NATO in 1992 and formally applied to join in 2008. This was arguably the most significant event leading up to the current invasion. Vladimir Putin listed his grievances with NATO, and called [Ukrainian membership a direct threat to his country](https://www.nytimes.com/2008/04/05/world/europe/05nato.html).
+
 
 ## Geopolitical context
 
@@ -95,9 +115,9 @@ Indeed. Yet our elected politicians, supposedly the guardians of our future negl
 
 ## The need for strong leadership
 
-Putin is one of the one richest people in the world through his control of previously state-controlled monopolies, now run by his cronies who shelter his _take_ on his behalf. For many years governments around the world have chosen not to see what has been going on, preferring instead to develop business interests in Russia, including allowing money laundering via property investment in cities such as London. 
+Putin is one of the one richest people in the world through his control of previously state-controlled monopolies, now run by his cronies who shelter his _take_ on his behalf. For many years governments around the world have chosen not to see what has been going on, preferring instead to develop business interests in Russia, including allowing money laundering via property investment and other financial transactions in cities such as London. 
 
-He is also a strong leader compared to his counterparts in Europe and the US. This is partly explained by the nature (lack) of democracy in the former Soviet Union and now completely entrenched by Putin's political manoeuverings over the last 20 plus years. However, not only doesn't he have to answer to his electorate (at least not so far) but he also has a clear idea of what makes Russia unique and important in the world. 
+He is also a strong leader compared to his counterparts in Europe and the US. This is partly explained by the nature (lack) of democracy in the former Soviet Union, now completely entrenched by Putin's political manoeuverings over the last 20 plus years. However, not only doesn't he have to answer to his electorate (at least not so far) but he also has a clear idea of what makes Russia unique and important in the world. 
 
 Contrast this with weak unpopular leaders in the West, mired in petty scandals, pushing policies that by design or accident, are handing strategic power to Russia. Energy policy is the main symptom of this malaise as a result of efforts to de-carbonise our economies at any cost. Whilst Russia has built up its military forces, the west (particularly Europe), has reduced military spending and gone on a crusade to improve sustainability, diversity and inclusion in what remains of our fighting forces.
 
@@ -133,7 +153,7 @@ I have presented what might appear to be contradictory viewpoints:
 
 Could the west (NATO and the European Union) have promoted western values (assuming we can agree what they are) whilst maintaining Ukraine and other eastern european countries as strong allies? Allies with whom we extend every cooperation apart from formal membership of NATO and the EU unless and until Russia joins the fold of democratic nations?
 
-Likewise, could we staunchly defend our own borders and put in place clear and unambiguous contingencies in the event of a future crisis such as this? Could we achieve unanimous commitment within NATO to planning and action, supported by guaranteed minimum defense spending?
+Likewise, could we staunchly defend our own borders and put in place clear and unambiguous contingencies in the event of a future crisis such as this? Could we achieve unanimous commitment within NATO to planning and action, supported by guaranteed minimum defence spending?
 
 ## Conclusions
 
@@ -141,17 +161,17 @@ I hope I have shown that there is a real need to understand and learn from the h
 
 In terms of what we can do in the short term:
 
-1. The UK and other western governments should not be putting soldiers on the ground in Ukraine, that would only inflame the current situation. I certainly wouldn't want my children to die in a foreign field fighting a war that could and should have been avoided.
-2. Sanctions need to be extended as quickly as possible to the maximum that the West is prepared to adopt (the recent move on SWIFT payments was a good step), sanctioning all Russian leaders personally and closing down money laundering opportunities around the world.
-3. Diplomatic efforts should be directed towards supporting the Ukraine as an independent neutral territory, with NATO and EU membership ruled out subject to ongoing peaceful relations with Russia.
+1. The UK and other western governments should not be putting soldiers on the ground in Ukraine, that would only inflame the current situation. I  wouldn't want my children to die in a foreign field fighting a war that could and should have been avoided. There must be a diplomatic solution which inevitably will require compromise.
+2. That said, no diplomatic solution will be possible without putting pressure on Russia. Therefore, sanctions need to be extended as quickly as possible to the maximum that the West is prepared to adopt (the recent move on SWIFT payments was a good step), sanctioning all Russian leaders personally and closing down money laundering opportunities around the world.
+3. Future diplomatic efforts should be directed towards supporting the Ukraine as an independent neutral territory, with NATO and EU membership ruled out subject to ongoing peaceful relations with Russia.
 
 Longer term all western governments need to:
 
 1. Ditch their infatuation with decarbonisation and commit to developing domestic energy supplies with no forms of energy being off the table in the short to medium term. 
 2. In parallel, transition to nuclear for our future clean energy needs. Although this will take a number of years, setting the policy direction clearly and loudly now will alert Putin that the West is no longer prepared to be held hostage over energy. The Russian economy is not very strong with energy being its primary export.
-3. Invest in critical industries and infrastructure, reducing reliance on foreign imports, particularly from dangerous regimes. Defense manufacturing, steel production, transport and utilities should be prioritised.
+3. Invest in critical industries and infrastructure, reducing reliance on foreign imports, particularly from dangerous regimes. Defence manufacturing, steel production, transport and utilities should be prioritised.
 4. Invest in military capability, increasing the quantity and quality of equipment and troops.
-5. Stop the promulgation of woke ideology in education, media and public bodies, i.e. push back against _the culture war_ and _identity politics_, guarant free speech and open debate. After all, if we want the west to succeed surely it is counter-productive to close down debate in the way that Russia and China do?
+5. Stop the promulgation of woke ideology in education, media and public bodies, i.e. push back against _the culture war_ and _identity politics_, guarantee free speech and open debate. After all, if we want the west to succeed surely it is counter-productive to close down debate in the way that Russia and China do?
 
 **The last of these may actually prove the hardest to deliver, but in the long term there will be no future for Western democracy at war with its own history and culture, retaining power by setting its population against each other.**
 
@@ -164,6 +184,5 @@ Longer term all western governments need to:
 5. Konstantin Kisin and Francis Foster, The Triggernometry Podcast, https://www.triggerpod.co.uk
 6. Michael Shellenburger, The West’s Green Delusions Empowered Putin, Common Sense, 1st March 2022, https://bariweiss.substack.com/p/the-wests-green-delusions-empowered
 7. Isabelle Kirk, More than a third of Britons cannot afford to heat their home to a comfortable level, YouGov, 26th Jan 2022, https://yougov.co.uk/topics/politics/articles-reports/2022/01/26/more-third-britons-cannot-afford-heat-their-home-c
-
-
-
+8. Vladimir Putin, Full text of Vladimir Putin’s speech announcing ‘special military operation’ in Ukraine, MSN, 24th Feb 2022, https://www.msn.com/en-in/news/world/full-text-of-vladimir-putins-speech-announcing-special-military-operation-in-ukraine/ar-AAUftE2
+9. Putin, at NATO Meeting, Curbs Combative Rhetoric, New York Times, 5th April 2008, https://www.nytimes.com/2008/04/05/world/europe/05nato.html

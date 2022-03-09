@@ -1,12 +1,13 @@
 ---
 title: Global warming - a good thing?
-date: 2022-02-22
 summary: The majority of the mainstream media promotes climate alarmism at every opportunity but what if global warming could be good for us?
 image: /images/liu-sicheng-4-KqFyHKRdo-unsplash-thumb.jpg
 imageCredit: Photo by <a href="https://unsplash.com/@lsc122746?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">liu sicheng</a> on <a href="https://unsplash.com/s/photos/green-trees?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 categories:
   - climate change
   - good news
+history:
+  - 2022-02-22 § Published.
 ---
 
 

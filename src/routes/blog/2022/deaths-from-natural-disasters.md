@@ -1,12 +1,13 @@
 ---
 title: Deaths from natural disasters
-date: 2022-02-13
 summary: Natural disasters kill on average 60,000 people per year and are responsible for 0.1% of global deaths but it's not all bad news.
 image: /images/chandler-cruttenden-oa_63VHgdiA-unsplash-thumb.jpg
 imageCredit: Photo by <a href="https://unsplash.com/@chanphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chandler Cruttenden</a> on <a href="https://unsplash.com/s/photos/tornado?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 categories: 
   - disasters
   - climate
+history:
+  - 2022-02-13 § Published.
 ---
 
 <script context="module">

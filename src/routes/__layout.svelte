@@ -16,7 +16,7 @@
     onMount(()=>{
         path = $page.url.pathname
         handleResize()
-        addHeadingIds()
+        processHeadingsAndAnchors()
     })
 
     afterUpdate(()=>{
@@ -24,7 +24,7 @@
         // console.log('afterUpdate path',path)
     })
 
-    function addHeadingIds(){
+    function processHeadingsAndAnchors(){
         const headings = document.querySelectorAll('main h1, main h2, main h3')
         headings.forEach( h => {
             const id = h.innerText
@@ -41,6 +41,8 @@
             // @todo - need to check not an off page link, or to another website
             if ( (a.href.includes('localhost') || a.href.includes(Utils.SITE)) && a.href.includes('#') ){
                 a.addEventListener( 'click', handleHashNav)
+            } else {
+                a.target = "_blank"
             }
         })
     }
