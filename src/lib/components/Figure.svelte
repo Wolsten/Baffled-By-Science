@@ -2,8 +2,8 @@
 
     import {containerWidth} from '$lib/stores'  
 
-    export let type
-    export let caption
+    export let type = 'other'
+    export let caption = ''
     export let source
 
     const DEFAULT_GOOGLE_MAP_SIZE = {width:600,height:450}
@@ -43,9 +43,15 @@
 
         <iframe src={source} {width} {height} title={caption} allowfullscreen="" loading="lazy"></iframe>
 
+    {:else if type === 'other'}
+
+        <iframe src={source}></iframe>
+
     {/if}
 
-    <figCaption>{caption}</figCaption>
+    {#if caption}
+        <figCaption>{caption}</figCaption>
+    {/if}
 </figure>   
 
 
@@ -62,14 +68,6 @@
     figure img {
         max-width: 100%;
         height:auto;
-    }
-
-    figcaption {
-        font-style: italic;
-        text-align:center;
-        font-size:0.9rem;
-        font-weight:bold;
-        margin-top:0.3rem;
     }
 
     iframe {

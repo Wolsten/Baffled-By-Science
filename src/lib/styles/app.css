@@ -251,8 +251,13 @@ a,
     hyphens: auto;
 }
 
-
-
+figcaption {
+    font-style: italic;
+    text-align:center;
+    font-size:0.9rem;
+    font-weight:bold;
+    margin-top:0.3rem;
+}
 
 
 /* Overrides for when used as a component in a Wordpress site  */

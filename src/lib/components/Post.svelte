@@ -2,16 +2,16 @@
 
 
     import {mobile} from '$lib/stores.js'
+    import Utils from '$lib/Utils'
 
     export let post
 
-    // console.table(post.meta)
-
-    const date = new Date(post.meta.date)
+    const {created} = Utils.getVersionHistory(post.meta?.history)
     const status = post.meta?.categories?.includes('draft') ? 'DRAFT' : 'Published'
     // const status = 'Published'
 
-    // console.log('post',post)
+    console.log('post',post)
+    console.log({created})
 
 
     
@@ -24,7 +24,7 @@
         <img src={post.meta.image} alt="" />
         <header>
             <h2>{post.meta.title}</h2>
-            <p>{status} {date.toLocaleDateString()}</p>
+            <p>{status} {created ? created.toLocaleDateString() : 'Missing'}</p>
         </header>
         <div class="body">
             <p>{post.meta.summary}</p>

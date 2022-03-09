@@ -2,10 +2,12 @@
      specified in svelte.config.js -->
 <script>
 
+    import { slide, fade } from 'svelte/transition'
+
+    import Utils from '$lib/Utils'
     import HeaderImage from '$lib/components/HeaderImage.svelte'
     import Comments from '$lib/components/Comments.svelte'
     import {windowWidth,containerWidth} from '$lib/stores'
-    import { slide, fade } from 'svelte/transition'
 
     // Pull in meta data from frontmatter in each markdown blog post
     export let title
@@ -18,27 +20,8 @@
     export let history = []
 
     // Version history
-    let created = 'date missing'
-    let updated = false
-    let versions = []
     let showVersionHistory = false
-    if ( history ){
-        history.forEach( version => {
-            const parts = version.split('§')
-            if ( parts.length == 2 ){
-                versions.push({
-                    date:new Date(parts[0].trim()),
-                    change: parts[1].trim()
-                })
-            }
-        })
-        if ( versions.length > 0 ){
-            created = versions[0].date
-        }
-        if ( versions.length > 1 ){
-            updated = versions[versions.length-1].date
-        }
-    }
+    const {created, updated, versions} = Utils.getVersionHistory(history)
 
     // console.table(history)
     // console.table(versions)

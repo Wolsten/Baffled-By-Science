@@ -522,7 +522,33 @@ const fetchDataset = async function ( fetch, datasetName ){
 }
 
 
+const getVersionHistory = function( history=[] ){
+    let created = ''
+    let updated = false
+    let versions = []
+    if ( history ){
+        history.forEach( version => {
+            const parts = version.split('§')
+            if ( parts.length == 2 ){
+                versions.push({
+                    date:new Date(parts[0].trim()),
+                    change: parts[1].trim()
+                })
+            }
+        })
+        if ( versions.length > 0 ){
+            created = versions[0].date
+        }
+        if ( versions.length > 1 ){
+            updated = versions[versions.length-1].date
+        }
+    }
+	return {created, updated, versions}
+}
+
+
 const Utils = {
+	getVersionHistory,
 	fetchData,
 	fetchDataset,
     processDataset,

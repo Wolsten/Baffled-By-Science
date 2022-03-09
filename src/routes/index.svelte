@@ -6,7 +6,7 @@
 		path : '../about',
 		meta: {
 			title:'About this blog',
-			date: '2022-01-23',
+			history: [ '2022-01-23 § Published.'],
 			summary : 'The blog for those of us baffled by what we read or hear in the media about science, technology and policy making.',
 			image : '/images/jr-korpa-fi5FPDZ6tns-unsplash-thumb.jpg',
 			imageCredit: 'Photo by <a href="https://unsplash.com/@jrkorpa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jr Korpa</a> on <a href="https://unsplash.com/collections/_Giamd8z4so/baffled-by-science/4aae626d376a8f46f5d4b78d1223a71c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
