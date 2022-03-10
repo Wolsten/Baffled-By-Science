@@ -44,7 +44,7 @@
     </h3>
 
     <div class="button">
-        <LinkButton {slug} label={'Explore'}/>
+        <LinkButton {slug} label={'Explore'} external={false}/>
     </div>
     
 </figCaption>

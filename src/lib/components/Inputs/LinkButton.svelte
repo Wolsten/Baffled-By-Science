@@ -2,6 +2,7 @@
 
     export let label
     export let slug
+    export let external = true
 
 </script>
 
@@ -9,7 +10,11 @@
 
 
 <!-- <a rel="external" href="/explore/{slug}">{label}</a> -->
-<a rel="external" href="{slug}">{label}</a>
+{#if external}
+    <a rel="external" href="{slug}">{label}</a>
+{:else}
+    <a href="{slug}">{label}</a>
+{/if}
 
 
 
