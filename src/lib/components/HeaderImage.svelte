@@ -69,6 +69,7 @@
     }
 
     p {
+        width:100%;
         padding:0 1rem;
         margin:0;
         font-size:0.8rem;

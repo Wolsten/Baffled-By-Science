@@ -612,7 +612,7 @@ const Utils = {
 	findNormalisedMin,
 	COLOUR_INACTIVE: 'var(--material-grey-400)',
 	MIN_BOX_WIDTH: 80,
-	CANVAS_MIN_HEIGHT: 200,
+	CANVAS_MIN_HEIGHT: 300,
 	CANVAS_PADDING_LEFT: 20,  // 20
 	CANVAS_PADDING_RIGHT: 20,  // 20
 	NAV_BREAK: 600,

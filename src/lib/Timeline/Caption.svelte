@@ -64,6 +64,7 @@
         padding:0;
         margin:0;
         max-width: 75%;
+        color:var(--colour-font);
     }
 
 

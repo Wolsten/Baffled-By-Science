@@ -13,6 +13,8 @@
     export let eventsLength
     export let options
 
+    console.log('seriesLength',seriesLength)
+
     const dispatch = createEventDispatcher()
 
     options.zoomIn = ()=>{
@@ -75,7 +77,6 @@
 </script>
 
 
-
 <div class="form">
 
     {#if options.readonly === false}
@@ -85,22 +86,20 @@
             <Toggle name="symbols" label="Symbols" bind:value={options.symbols}
                     on:changed={dispatch('optionsChanged', {name:'symbols', data:options.symbols})} />
 
-            <Toggle name="logScale" label="Scale" bind:value={options.logScale}
+            <!-- @todo
+                The scaling needs updating to handle negative values 
+                <Toggle name="logScale" label="Scale" bind:value={options.logScale}
                     options={['Linear','Log']}
-                    on:changed={dispatch('optionsChanged', {name:'logScale', data:options.logScale})} />
+                    on:changed={dispatch('optionsChanged', {name:'logScale', data:options.logScale})} /> -->
 
         {/if}
 
-        {#if seriesLength > 0 }
+        {#if seriesLength > 1 }
 
             <Toggle name="categorise" label="Colour by" bind:value={options.categorise}
                     options={['Series','Category']}
                     disabled={options.totalise}
                     on:changed={dispatch('optionsChanged', {name:'categorise', data:options.categorise})} />
-
-        {/if}
-
-        {#if seriesLength > 1 }
 
             <Toggle name="totalise" label="Grouping" bind:value={options.totalise}
                     on:changed={()=>{

@@ -17,6 +17,7 @@ history:
             props: {
                 covid19a: await Utils.fetchDataset( fetch, 'COVID-19a'), 
                 covid19b: await Utils.fetchDataset( fetch, 'COVID-19b'), 
+                covid19c: await Utils.fetchDataset( fetch, 'COVID-19c'),
             }
         }
     }
@@ -31,6 +32,7 @@ history:
 
     export let covid19a
     export let covid19b
+    export let covid19c
 
     const excessDeathsTable = {
       rows : [
@@ -69,8 +71,6 @@ For context lets look at total deaths beginning in [2019 upto Feb 2022](https://
         readonly: true
     }}/>
 
-<Figure type="img" source="/images/ONS-deaths-2019-22.png" caption="Source: Office for National Statistics – Weekly Deaths England and Wales (2019 to Feb 2022)"/>
-
 We notice a number of things from this chart:
 
 1. The impact of COVID stands out clearly (more later on this).
@@ -85,8 +85,6 @@ To make the last point clearer, the following chart shows the excess deaths over
     settings={{
         readonly: true
     }}/>
-
-<Figure type="img" source="/images/ONS-excess-deaths.png" caption="Source: Office for National Statistics – Excess Deaths England and Wales (2019 to Feb 2022)"/>
 
 Now we will look at some very interesting data that came out of a [Freedom of Information request](https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/covid19alonewithnounderlininghealthissuesnovemeber2019todecember2021) in January 2022 where the question asked was:
 
@@ -110,11 +108,19 @@ And displayed as a chart:
 
 If you aren't shocked by this data you should be. I calculated the cumulative total for deaths with COVID to the week ending 1st October 2021 to be 146,365. Comparing this to the total of 17,371 without underlying causes we see that it is only 12%. The proportion is even smaller when comparing to the total number of deaths over the same period (1,051,085), coming to 1.65%.
 
-To emphasise this point the following chart displays the number of deaths registered as with-COVID against the theoretical number of deaths that might have ocurred if we multiply total deaths by 1.65% calculated above:
+To emphasise this point the following chart displays the number of deaths registered as with-COVID against the theoretical number of deaths that might have ocurred if we multiply total deaths by the percentage 1.65% calculated above:
 
-<Figure type="img" source="/images/ONS-FOI-COVID-Deaths.png" caption="Source: Office for National Statistics – FOI determined theoretical COVID-only deaths"/>
+<Timeline
+    data={covid19c}
+    settings={{
+        readonly: true,
+        xRange: {
+          start: 2020,
+          end: 2022
+        }
+    }}/>
 
-This means that for otherwise healthy people with no underlying health conditions such as obesity, diabetes, etc, the risk of dying due to COVID alone is extremely small. I find it hard to overstate the importance of this result since the ramifications for health policy should be obvious and I will go through them later.
+This means that for otherwise healthy people with no underlying health conditions such as obesity, diabetes, etc, the risk of dying due to COVID alone is extremely small. I find it hard to overstate the importance of this result since the ramifications for health policy should be obvious and I will go through them later. If you have seen a graph and discussion like this in the main stream media or presented by government advisors please let me know.
 
 
 ## Timeline of UK COVID restrictions

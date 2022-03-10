@@ -78,7 +78,6 @@
 
 <svelte:window on:resize={handleResize}/>
 
-<!-- <div class="container" on:click={resetMenu} bind:this={container}> -->
 
 <header>
 
@@ -113,6 +112,7 @@
         flex-direction: column;
         align-items: center;
         width:100%;
+        flex-grow:2;
     }
 
     header {
