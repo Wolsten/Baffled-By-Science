@@ -39,9 +39,10 @@
         anchors.forEach( a => {
             // console.log('Found link', a.href)
             // @todo - need to check not an off page link, or to another website
-            if ( (a.href.includes('localhost') || a.href.includes(Utils.SITE)) && a.href.includes('#') ){
+            if ( a.href.includes(Utils.SITE) && a.href.includes('#') ){
                 a.addEventListener( 'click', handleHashNav)
-            } else {
+            }
+            if ( a.href.includes('http') && a.href.includes(Utils.SITE) == false ){
                 a.target = "_blank"
             }
         })

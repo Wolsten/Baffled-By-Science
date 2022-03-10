@@ -5,63 +5,27 @@
     import Symbol from '$lib/Timeline/Symbol.svelte'
     import Utils from '$lib/Utils'
 
-    // export let seriesSubCats
     export let eventsSubCats
     export let options
     export let filteredEvents
 
     const dispatch = createEventDispatcher()
 
-    // console.log('Event subCats',eventsSubCats)
-    // console.log('options subCats',options.subCats)
 
-
-    function handleClickEventCategory( filter ){
-        // console.log('filteredSeries',index, options.series)
+    function handleClick(filter){
+        console.log('handleClick with:\n  filter=',filter,'\n  options.filter=',options.filter)
         if ( filter != options.filter ){
             options.filter = filter
         } else {
             options.filter = ''
         }
-        // console.log('selected',options.selectedEvent)
-
         dispatch('optionsChanged',{name:'filter', data:options.filter})
     }
 
-
-    function handleClickSeries( filter ){
-        console.log('handleClickSeries with filter',filter)
-        if ( filter != options.filter ){
-            options.search = filter
-        } else {
-            options.search = ''
-        }
-        // console.log('selected',options.selectedEvent)
-
-        dispatch('optionsChanged',{name:'filter', data:options.filter})
-    }
-
-
-
-    // function handleClickSeries( index ){
-    //     // console.log('filteredSeries',index, options.series)
-    //     options.selectedPoint = { 
-    //         name: options.series[index].name,
-    //         index, 
-    //         i:-1,
-    //         points: options.series[index],
-    //         citations: options.series[index].citations
-    //     }
-    //     console.log('selected',options.selectedPoint)
-
-    //     dispatch('optionsChanged',{name:'selectedPoint', data:options.selectedPoint})
-    // }
 
     function active( optionsFilter, filter, sel, index ){
         return (optionsFilter==filter) || (sel && sel.index==index)
     }
-
-    // console.error('options',options)
 
 </script>
 
@@ -88,7 +52,7 @@
                             style:color={Utils.colour(index, index, options.categorise)}
                             class:active={options.search==cat} 
                             title="Click to highlight this event category"
-                            on:click|stopPropagation={()=>handleClickEventCategory(cat)} >
+                            on:click|stopPropagation={()=>handleClick(cat)} >
 
                             {cat}
                         </span>
@@ -114,7 +78,7 @@
                     <span class="series" 
                         style:color={Utils.colour(index, series.colourIndex, options.categorise || options.totalise)}
                         class:active={active(options.search, filter, options.selectedPoint,index)} 
-                        on:click|stopPropagation={()=>handleClickSeries(filter)}
+                        on:click|stopPropagation={()=>handleClick(filter)}
                         title="Click to highlight this series">
 
                         {#if options.symbols}

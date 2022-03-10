@@ -30,7 +30,7 @@
         series : []
     }
     
-    // console.log('data',data, '\noptions', options)
+    console.log('data',data, '\noptions', options)
 
     let viewport
     let viewportWidth = 0
@@ -66,7 +66,6 @@
     // Functions
     //
 
-
     function handleOptions(event){
         const detail = event.detail
         // console.log('Options changed',detail)
@@ -87,6 +86,7 @@
                 scaleX()
                 break
             case 'filter'   : 
+                console.log('Filtering')
                 options.filter = detail.data
                 options.selectedEvent = false
                 options.selectedPoint = false
@@ -191,7 +191,7 @@
 
         {#if options.readonly}
 
-            <Caption {options} title={data.name} slug="/explore/{data.slug}"/>
+            <Caption {options} title={data.name} slug="/explore/{data.slug}" />
         
         {:else}
 
@@ -257,6 +257,7 @@
     .timeline-content {
         padding:1rem;
         background: var(--colour-chart-background);
+        border: 1px solid var(--colour-chart-border);
         position:relative;
         width:100%;
         overflow:hidden;

@@ -29,7 +29,7 @@
     }
 
     a {
-        border:1px solid transparent;
+        border:1px solid var(--colour-input-border);
         background: var(--colour-background);
         border-radius: var(--size-input-border-radius);
         padding:var(--size-input-padding);
@@ -39,7 +39,7 @@
 
 
     a:hover {
-        background-color: var(--colour-menu-hover);
+        background-color: var(--colour-input-border);
         color:white;
     }
 

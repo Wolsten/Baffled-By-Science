@@ -137,14 +137,16 @@
         text-align:right;
     }
 
-    .col:hover {
-        background-color: var(--colour-highlight);
+    .col:not(.active):hover {
+        background-color: var(--colour-legend-highlight);
+        color:var(--colour-background);
         cursor: pointer;
     }
 
     .col.active {
-        background-color: var(--colour-background);
-        cursor: inherit;
+        background-color: var(--colour-legend-active);
+        color:var(--colour-background);
+        cursor: default;
         font-weight:bold;
     }
 

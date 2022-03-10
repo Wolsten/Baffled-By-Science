@@ -81,8 +81,13 @@
 
     --colour-box-shadow: var(--material-200-blue-grey);
     
-    --colour-chart-background: var(--material-100-grey);
+    --colour-chart-background: white; 
+    --colour-chart-border: var(--material-50-blue-grey);
+
+    /* var(--material-100-grey); */
+    --colour-lines: var(--material-400-blue-grey);
     --colour-faint-lines: var(--material-200-blue-grey);
+    --colour-legend-active: var(--material-400-blue-grey);
     --colour-legend-highlight: var(--material-200-blue-grey);
 
     --colour-input-border: var(--material-200-blue-grey);
@@ -91,7 +96,6 @@
     
     --colour-toggle-hover-font: white;
     --colour-range-slider-fill: var(--material-100-grey);
-
     --colour-search-reset-hover: var(--material-500-red);
 
     /* Other custom variables */
@@ -103,7 +107,7 @@
     --size-x-padding: 2%;
 
     --size-input-border-radius: 0.4rem;
-    --size-input-padding: 0.3rem 0.6rem;
+    --size-input-padding: 0.2rem 0.5rem;
 }
 
 

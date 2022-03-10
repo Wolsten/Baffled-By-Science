@@ -1,3 +1,5 @@
+import { dev } from '$app/env';
+
 const SYMBOLS = 7 // Must match number of symbol classes in Symbol.svelte
 const MIN_EVENT_WIDTH = 3
 
@@ -29,6 +31,22 @@ const toPrecision = function( num, digits ){
 }
 
 
+const findNormalisedMin = function( step, min ){
+	let y = 0
+	// debugger
+	if ( min < 0 ) {
+		while( y > min ){
+			y -= step
+		}
+	} else {
+		while( y < min ){
+			y += step
+		}
+	}
+	return y
+}
+
+
 const formatNumber = function(number,digits=0){
 	let suffix = ''
 	if ( number > 1000000 ){
@@ -48,6 +66,13 @@ const formatDate = function(date){
 		formatted = `${date.day} ${getMonth(date.month)} ${formatted}`
 	}
 	return formatted
+}
+
+
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+
+const getMonth = function ( m ){
+	return MONTHS[parseInt(m)-1]
 }
 
 
@@ -112,13 +137,15 @@ const eventDates = function(event){
 
 
 const initXAxis = function(start,end,events,series){
+	const s = start.year ? start.year : start
+	const e = end.year ? end.year : end
     return {
 		majorAxis : [],
 		majorTicks : [],
 		majorLabels : [],
-		majorFirst : start,
-		majorLast : end,
-		majorRange : end - start,
+		majorFirst : s,
+		majorLast : e,
+		majorRange : e - s,
         xUnit : events.length > 0 
             ? 'date' 
             : series.length > 0 ? series[0].xUnit : ''
@@ -138,14 +165,21 @@ const initSettings = function( userSettings, start, end, subCats ){
 	settings.filter = userSettings.filter || ''
     settings.title = userSettings.title || ''
     settings.sort = userSettings.sort || 'x'
-    if ( userSettings.xRange && userSettings.xRange.start && userSettings.xRange.end ){
+    // if ( userSettings.xRange && userSettings.xRange.start && userSettings.xRange.end ){
+	if ( userSettings?.xRange?.end != undefined ){
         settings.xRange = userSettings.xRange
-        settings.xRange.range = userSettings.xRange.end - userSettings.xRange.start
+		if ( userSettings.xRange.start.year && userSettings.xRange.end.year  ){
+        	settings.xRange.range = userSettings.xRange.end.year - userSettings.xRange.start.year
+		} else {
+			settings.xRange.range = userSettings.xRange.end - userSettings.xRange.start
+		}
     } else {
+		const s = start.year ? start.year : start
+		const e = end.year ? end.year : end
         settings.xRange = {
-            start: start,
-            end: end,
-            range: end - start
+            start: s,
+            end: e,
+            range: e - s
         }
     }
     settings.subCats = userSettings.subCats || subCats
@@ -398,7 +432,10 @@ const processSeries = function(set, scale, startValue, endValue){
 	
 	let filtered = []
 
-	// console.warn('set',set,'scale',scale)
+	console.warn('set',set)
+	console.log('scale',scale)
+	console.log('startValue',startValue)
+	console.log('endValue',endValue)
 
 	set.forEach( (series,index) => {
 
@@ -409,8 +446,9 @@ const processSeries = function(set, scale, startValue, endValue){
 
 			// Range test
 			let inRange 
+
 			// debugger
-			if ( set.xUnit == 'date' ){
+			if ( point?.date?.year ){
 				inRange = point.date.year >= startValue &&
 						  point.date.year <= endValue
 			} else {
@@ -420,13 +458,13 @@ const processSeries = function(set, scale, startValue, endValue){
 
 			if ( inRange ){
 
-				const value = set.xUnit == 'date' ? point.date.decimal : point.x
+				const value = point?.date?.decimal ? point.date.decimal : point.x
 				const x = (value - startValue) * scale
 
 				let xLabel = point.x
-				if ( set.xUnit == 'date' ){
-					xLabel =  formatDate(point.date) 
-				} else if ( set.xUnit == 'year' ){
+				if ( point.date ){
+					xLabel = formatDate(point.date) 
+				} else {
 					xLabel = formatYear(point.x)
 				}
 
@@ -453,13 +491,20 @@ const processSeries = function(set, scale, startValue, endValue){
 
 const labelAxis = function( xAxis, paddingLeft, drawingWidth, range){
 
-	// console.log('labelAxis: range',range)
-	const intervals = Math.floor(drawingWidth/Utils.MIN_BOX_WIDTH)
-	const intervalWidth = drawingWidth / intervals  
-	const interval = range.range / intervals   
+	console.log('labelAxis: range',range)
+
+	// const intervals = Math.floor(drawingWidth/Utils.MIN_BOX_WIDTH)
+	// const intervalWidth = drawingWidth / intervals  
+	let intervals = range.range
+	let intervalWidth = drawingWidth / range.range 
+	if ( intervalWidth < Utils.MIN_BOX_WIDTH ){
+		intervals = Math.floor(drawingWidth/Utils.MIN_BOX_WIDTH)
+		intervalWidth = drawingWidth / intervals  
+	}
+	const interval = range.range / intervals 
 
 	let x = paddingLeft
-	let units = range.start
+	let units = range.start?.year ? range.start.year : range.start
 	let newAxis = { ...xAxis}
 
 	// Initialise values, ticks and labels
@@ -471,19 +516,21 @@ const labelAxis = function( xAxis, paddingLeft, drawingWidth, range){
 
 		newAxis.majorTicks.push(parseInt(x))
 
+		// console.log('units',units)
+
 		if ( xAxis.xUnit=='date' ){
 			newAxis.majorAxis.push( parseInt(units) )
 			newAxis.majorLabels.push( formatYear(parseInt(units)) )
 		} else {
-			newAxis.majorAxis.push( units )
-			newAxis.majorLabels.push( units )
+			newAxis.majorAxis.push( parseInt(units) )
+			newAxis.majorLabels.push( parseInt(units) )
 		}
 
 		x += intervalWidth
 		units += interval
 	}
 
-	// console.table(newAxis)
+	console.table(newAxis)
 
 	return newAxis
 }
@@ -562,13 +609,14 @@ const Utils = {
 	formatNumber,
 	formatYear,
 	colour,
+	findNormalisedMin,
 	COLOUR_INACTIVE: 'var(--material-grey-400)',
 	MIN_BOX_WIDTH: 80,
 	CANVAS_MIN_HEIGHT: 200,
 	CANVAS_PADDING_LEFT: 20,  // 20
 	CANVAS_PADDING_RIGHT: 20,  // 20
 	NAV_BREAK: 600,
-	SITE: 'https://baffledbyscience.com'
+	SITE: dev ? 'localhost' : 'https://baffledbyscience.com'
 }
 
 export default Utils

@@ -10,10 +10,27 @@ history:
   - 2022-03-09 § ***DRAFT***
 ---
 
+<script context="module">
+    import Utils from "$lib/Utils.js"
+    export const load = async ({ fetch }) => {
+        return {
+            props: {
+                covid19a: await Utils.fetchDataset( fetch, 'COVID-19a'), 
+                covid19b: await Utils.fetchDataset( fetch, 'COVID-19b'), 
+            }
+        }
+    }
+</script>
+
+
 
 <script>
+    import Timeline from '$lib/Timeline/Timeline.svelte'
     import Figure from "$lib/components/Figure.svelte"
     import Table from "$lib/components/Table.svelte"
+
+    export let covid19a
+    export let covid19b
 
     const excessDeathsTable = {
       rows : [
@@ -42,9 +59,15 @@ The following chart sourced from the [UK Office of National Statistics](https://
 
 <Figure type="img" source="/images/ONS-deaths-25-Feb-2022.png" caption="Source: Office for National Statistics – Deaths registered weekly in England and Wales"/>
 
-It is clear that weekly deaths greatly exceeded the 5-year average at the start of the pandemic and then agin in the second wave in 2021. However, since the second wave the number of excess deaths seems to be much more in line with the 5-year average, dropping below in the most recent months.
+It is clear that weekly deaths greatly exceeded the 5-year average at the start of the pandemic and then agin in the second wave in 2021. However, since the second wave the number of excess deaths seems to be much more in line with the 5-year average, dropping (significantly?) below in the most recent months.
 
-For context lets look at total deaths beginning in [2019 upto Feb 2022](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales).
+For context lets look at total deaths beginning in [2019 upto Feb 2022](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales):
+
+<Timeline
+    data={covid19a}
+    settings={{
+        readonly: true
+    }}/>
 
 <Figure type="img" source="/images/ONS-deaths-2019-22.png" caption="Source: Office for National Statistics – Weekly Deaths England and Wales (2019 to Feb 2022)"/>
 
@@ -53,8 +76,15 @@ We notice a number of things from this chart:
 1. The impact of COVID stands out clearly (more later on this).
 2. The peaks for the two large waves in 2020 and 2021 have a different characteristic, the former showing both COVID related and _normal_ deaths increasing, whilst the second peak shows COVID-related deaths _replacing_ deaths due to other causes. The remarkable thing to me is that the COVID related deaths follow a similar trend in both peaks.
 3. Over this longer time period it can be seen that prior to the pandemic the 5-year average death rate was a good predictor of future years, with small deviations in both directions.
+4. Total deaths in January 2018 were higher than in January 2022, which is consistent with deaths now being lower than the 5-year average.
 
 To make the last point clearer, the following chart shows the excess deaths over the same time period:
+
+<Timeline
+    data={covid19b}
+    settings={{
+        readonly: true
+    }}/>
 
 <Figure type="img" source="/images/ONS-excess-deaths.png" caption="Source: Office for National Statistics – Excess Deaths England and Wales (2019 to Feb 2022)"/>
 
@@ -78,10 +108,16 @@ And displayed as a chart:
 
 <Figure type="img" source="/images/ONS-FOI-chart.png" caption="Source: Office for National Statistics – Deaths with no other underlying causes"/>
 
-If you aren't shocked by this data you should be. I calculated the cumulative total for deaths with COVID to the week ending 1st October 2021 to be 146,365. Comparing this to the total of 17,371 without underlying causes we see that it is **only 12%**. The proportion is even smaller when comparing to the total number of deaths over the same period (1,051,085) coming to 2%.
+If you aren't shocked by this data you should be. I calculated the cumulative total for deaths with COVID to the week ending 1st October 2021 to be 146,365. Comparing this to the total of 17,371 without underlying causes we see that it is only 12%. The proportion is even smaller when comparing to the total number of deaths over the same period (1,051,085), coming to 1.65%.
 
-This means that for otherwise healthy people with no underlying health conditions such as obesity, diabetes etc, the risk of dying due to COVID alone is extremely small. I find it hard to overstate the importance of this result since the ramifications for health policy should be obvious, though I will go through them later.
+To emphasise this point the following chart displays the number of deaths registered as with-COVID against the theoretical number of deaths that might have ocurred if we multiply total deaths by 1.65% calculated above:
 
+<Figure type="img" source="/images/ONS-FOI-COVID-Deaths.png" caption="Source: Office for National Statistics – FOI determined theoretical COVID-only deaths"/>
+
+This means that for otherwise healthy people with no underlying health conditions such as obesity, diabetes, etc, the risk of dying due to COVID alone is extremely small. I find it hard to overstate the importance of this result since the ramifications for health policy should be obvious and I will go through them later.
+
+
+## Timeline of UK COVID restrictions
 
 
 
@@ -111,7 +147,9 @@ This means that for otherwise healthy people with no underlying health condition
 1. UK Office of National Statistics, https://www.ons.gov.uk/
 2. England and Wales Weekly Deaths, https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales
 3. COVID-19 alone with no underlining health issues November 2019 to December 2021, ONS, 18th Jan 2022, https://www.ons.gov.uk/aboutus/transparencyandgovernance/freedomofinformationfoi/covid19alonewithnounderlininghealthissuesnovemeber2019todecember2021
+4. Timeline of UK government coronavirus lockdowns and measures, March 2020 to December 2021, Institute for Government analysis, https://www.instituteforgovernment.org.uk/sites/default/files/timeline-coronavirus-lockdown-december-2021.pdf
 
 https://phmpt.org/pfizers-documents/
 
 https://news.sky.com/story/covid-19-expert-claims-he-was-told-to-correct-his-views-after-criticising-implausible-graph-shown-during-official-briefing-12555800
+

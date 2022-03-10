@@ -22,6 +22,10 @@
     const dispatch = createEventDispatcher()
 
 
+    console.log('series',series)
+    console.log('groups',groups)
+
+
     // Set viewport height to be proportional to width upto a max size
     let height = Math.min(viewportWidth/2, Utils.CANVAS_MIN_HEIGHT)
 
@@ -125,11 +129,11 @@
             if ( entry.min < globalMin ) globalMin = entry.min
             if ( entry.max > globalMax ) globalMax = entry.max
         })
-        // console.log('Raw globalMin, globalMax',globalMin,globalMax)
+        console.log('Raw globalMin, globalMax', globalMin, globalMax)
 
         // Log scale?
         if ( options.logScale ){
-            if ( globalMin != 0 ){
+            if ( globalMin <= 0 ){
                 globalMin = Math.round(Math.log10(globalMin))
             } else {
                 globalMin = 1
@@ -142,8 +146,11 @@
         range = globalMax - globalMin
         range = Utils.toPrecision(range,1)
         const step = options.logScale ? 0.5 : range/10
-        globalMin = Utils.toPrecision(globalMin - (globalMin % step), 1)
-        // console.log('global min,max,step',globalMin,globalMax,step)
+        console.log('step, globalMin % step',step, globalMin % step)
+
+        // globalMin = Utils.toPrecision(globalMin - (globalMin % step), 1)
+        globalMin = Utils.findNormalisedMin( step, globalMin )
+        console.log('Normalised global min,max,step', globalMin, globalMax,step)
 
         // Normalise the maximum value and range and get y intervals (horizontals)
         let y = globalMin
@@ -263,7 +270,7 @@
             <!-- line and label-->
             {#if index != 0}
 
-                <line class="y-line" 
+                <line class="y-line {h.y==0 ? 'y-zero' : ''}"
                       x1={paddingLeft} x2={paddingLeft+drawingWidth}  
                       y1={yValue(h.y,globalMin)} y2={yValue(h.y,globalMin)}/>
             
@@ -278,7 +285,7 @@
         <!-- Date series -->
         {#each options.series as entry, index}
 
-            {@const colour = getColour(options.selectedPoint,options.search,index,entry.colourIndex)}
+            {@const colour = getColour(options.selectedPoint,options.filter,index,entry.colourIndex)}
             {@const width = colour==Utils.COLOUR_INACTIVE ? 1 : 2}
 
             <!-- Line -->
@@ -334,6 +341,11 @@
     .y-line {
         stroke-width: 1;
         stroke: var(--colour-faint-lines);
+    }
+
+    .y-line.y-zero {
+        stroke-width: 2;
+        stroke: var(--colour-lines);
     }
 
     .y-label {
