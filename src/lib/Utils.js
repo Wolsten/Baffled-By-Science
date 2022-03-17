@@ -432,10 +432,10 @@ const processSeries = function(set, scale, startValue, endValue){
 	
 	let filtered = []
 
-	console.warn('set',set)
-	console.log('scale',scale)
-	console.log('startValue',startValue)
-	console.log('endValue',endValue)
+	// console.warn('set',set)
+	// console.log('scale',scale)
+	// console.log('startValue',startValue)
+	// console.log('endValue',endValue)
 
 	set.forEach( (series,index) => {
 
@@ -491,7 +491,7 @@ const processSeries = function(set, scale, startValue, endValue){
 
 const labelAxis = function( xAxis, paddingLeft, drawingWidth, range){
 
-	console.log('labelAxis: range',range)
+	// console.log('labelAxis: range',range)
 
 	// const intervals = Math.floor(drawingWidth/Utils.MIN_BOX_WIDTH)
 	// const intervalWidth = drawingWidth / intervals  

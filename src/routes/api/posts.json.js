@@ -34,7 +34,7 @@ export const get = async () => {
 		allPosts = allPosts.filter( post => post.meta.categories.includes('draft') === false)
 	}
 
-	console.log('allPosts',allPosts)
+	// console.log('allPosts',allPosts)
 
 	const sortedPosts = allPosts.sort((a, b) => {
 		return new Date(b.meta.date) - new Date(a.meta.date)

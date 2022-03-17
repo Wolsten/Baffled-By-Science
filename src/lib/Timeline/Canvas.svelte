@@ -22,8 +22,8 @@
     const dispatch = createEventDispatcher()
 
 
-    console.log('series',series)
-    console.log('groups',groups)
+    // console.log('series',series)
+    // console.log('groups',groups)
 
 
     // Set viewport height to be proportional to width upto a max size
@@ -146,11 +146,11 @@
         range = globalMax - globalMin
         range = Utils.toPrecision(range,1)
         const step = options.logScale ? 0.5 : range/10
-        console.log('step, globalMin % step',step, globalMin % step)
+        // console.log('step, globalMin % step',step, globalMin % step)
 
         // globalMin = Utils.toPrecision(globalMin - (globalMin % step), 1)
         globalMin = Utils.findNormalisedMin( step, globalMin )
-        console.log('Normalised global min,max,step', globalMin, globalMax,step)
+        // console.log('Normalised global min,max,step', globalMin, globalMax,step)
 
         // Normalise the maximum value and range and get y intervals (horizontals)
         let y = globalMin
@@ -179,7 +179,7 @@
              options.selectedPoint.index != index || 
              options.selectedPoint.i != point.i ){
 
-            console.log({items})
+            // console.log({items})
  
             options.selectedPoint = { 
                 type:'series', 

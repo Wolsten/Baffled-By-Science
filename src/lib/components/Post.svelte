@@ -10,7 +10,7 @@
     const status = post.meta?.categories?.includes('draft') ? 'DRAFT' : 'Published'
     // const status = 'Published'
 
-    console.log('post.path',post)
+    // console.log('post.path',post)
     // console.log({created})
 
 

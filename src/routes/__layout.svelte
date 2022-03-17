@@ -56,7 +56,7 @@
         target.scrollIntoView({behavior: "smooth"})
         target.classList.add('scrolled-into-view')
         setTimeout( () => target.classList.add('show'), 1000)
-        console.log(target)
+        // console.log(target)
     }
 
     function handleResize(){

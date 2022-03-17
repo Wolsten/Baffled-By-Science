@@ -12,7 +12,7 @@
     const dispatch = createEventDispatcher()
 
     function handleClick(){
-        console.log('Clicking props')
+        // console.log('Clicking props')
         selectedEvent = false
         dispatch('optionsChanged',{name:'selectedEvent',data:selectedEvent})
     }

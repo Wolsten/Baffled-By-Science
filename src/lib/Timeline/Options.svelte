@@ -13,7 +13,7 @@
     export let eventsLength
     export let options
 
-    console.log('seriesLength',seriesLength)
+    // console.log('seriesLength',seriesLength)
 
     const dispatch = createEventDispatcher()
 

@@ -45,7 +45,7 @@
 
     {:else if type === 'other'}
 
-        <iframe src={source}></iframe>
+        <iframe src={source} title={caption} ></iframe>
 
     {/if}
 

@@ -30,7 +30,7 @@
         series : []
     }
     
-    console.log('data',data, '\noptions', options)
+    // console.log('data',data, '\noptions', options)
 
     let viewport
     let viewportWidth = 0
@@ -86,7 +86,7 @@
                 scaleX()
                 break
             case 'filter'   : 
-                console.log('Filtering')
+                // console.log('Filtering')
                 options.filter = detail.data
                 options.selectedEvent = false
                 options.selectedPoint = false
@@ -139,6 +139,7 @@
         // console.error('scaleX: viewPortWidth',viewportWidth)
         drawingWidth = viewportWidth - paddingLeft - paddingRight
         // console.log('drawingWidth',drawingWidth)
+        // console.log('range',options.xRange.range)
         // scale in pixel / x-unit
         scale = drawingWidth / options.xRange.range
         // console.log('rescaling',scale)

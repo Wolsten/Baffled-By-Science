@@ -6,7 +6,7 @@
 
     import Utils from '$lib/Utils'
     import HeaderImage from '$lib/components/HeaderImage.svelte'
-    import Comments from '$lib/components/Comments.svelte'
+    // import Comments from '$lib/components/Comments.svelte'
     import {windowWidth,containerWidth} from '$lib/stores'
 
     // Pull in meta data from frontmatter in each markdown blog post
@@ -78,7 +78,7 @@
         <slot />
     </div>
 
-    <Comments />
+    <!-- <Comments /> -->
 
 </div>
 

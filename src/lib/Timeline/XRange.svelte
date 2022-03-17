@@ -33,8 +33,7 @@ import { createEventDispatcher } from 'svelte'
         start = options.xRange.start
         end = options.xRange.end
 
-        console.log('max',maxValue)
-
+        // console.log('max',maxValue)
         // console.log('start',start)
         // console.log('end',end)
 
@@ -42,7 +41,7 @@ import { createEventDispatcher } from 'svelte'
             if ( start >= fullAxis.majorAxis[i] ){
                 // console.log('start',start, 'major',fullAxis.majorAxis[i])
                 minValue = i
-                console.log('minValue',minValue)
+                // console.log('minValue',minValue)
             }
         }
 
@@ -54,8 +53,7 @@ import { createEventDispatcher } from 'svelte'
             }
         }
 
-        console.log('max',maxValue)
-
+        // console.log('max',maxValue)
         // console.log('majorAxis, min & max values', fullAxis.majorAxis, minValue, maxValue)
     }
 

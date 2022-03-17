@@ -13,7 +13,7 @@
 
 
     function handleClick(filter){
-        console.log('handleClick with:\n  filter=',filter,'\n  options.filter=',options.filter)
+        // console.log('handleClick with:\n  filter=',filter,'\n  options.filter=',options.filter)
         if ( filter != options.filter ){
             options.filter = filter
         } else {
